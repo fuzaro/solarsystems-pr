@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PlanetCard from '../../components/PlanetCard.astro';
+import SchematicDiagram from '../../components/SchematicDiagram.astro';
 import pt from '../../i18n/pt.json';
 ---
 <BaseLayout title="Solar Systems AI — Como Funciona" lang="pt" currentPage="how">
@@ -29,6 +30,12 @@ import pt from '../../i18n/pt.json';
           </div>
         ))}
       </div>
+    </div>
+
+    <!-- System Architecture -->
+    <div class="mb-12">
+      <h2 class="font-mono text-xs tracking-[0.2em] text-navy-dark font-bold mb-6">◆ ARQUITETURA_DO_SISTEMA</h2>
+      <SchematicDiagram />
     </div>
 
     <!-- Architecture -->
