@@ -30,10 +30,9 @@ npm run build
 npm run preview
 ```
 
-## Deployment
+## The Deployment
 
 Automatically deployed to GitHub Pages on push to `main` via GitHub Actions.
-
 ## License
 
 MIT
