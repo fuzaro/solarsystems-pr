@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-navy-dark bg-grid-paper;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 39px, #e5e7eb 39px, #e5e7eb 40px),
+      repeating-linear-gradient(90deg, transparent, transparent 39px, #e5e7eb 39px, #e5e7eb 40px);
+  }
+
+  ::selection {
+    background-color: #1a5cff;
+    color: #ffffff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1a1f36;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3b4263;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4c567a;
+  }
+}
+
+@layer components {
+  .font-retro {
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  .card-hover {
+    @apply transition-all duration-200;
+  }
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 31, 54, 0.12);
+  }
+
+  .link-hover {
+    @apply transition-colors duration-150;
+  }
+  .link-hover:hover {
+    color: #1a5cff;
+  }
+
+  .blink-cursor::after {
+    content: '▌';
+    animation: blink 1s step-end infinite;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

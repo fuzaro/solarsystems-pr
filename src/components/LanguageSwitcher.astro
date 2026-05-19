@@ -1,0 +1,36 @@
+---
+/* LanguageSwitcher — Toggle between EN and PT locales */
+interface Props {
+  lang: string;
+  currentPath?: string;
+}
+const { lang, currentPath } = Astro.props;
+const otherLang = lang === 'en' ? 'pt' : 'en';
+const basePath = currentPath || Astro.url.pathname;
+const switchPath = basePath.replace(`/${lang}/`, `/${otherLang}/`);
+---
+<div class="flex items-center gap-1 font-mono text-[10px] tracking-wider">
+  <a
+    href={lang === 'en' ? basePath : switchPath}
+    class:list={[
+      'px-1.5 py-0.5 transition-colors duration-150',
+      lang === 'en'
+        ? 'text-blue-terminal font-bold'
+        : 'text-gray-500 hover:text-white',
+    ]}
+  >
+    EN
+  </a>
+  <span class="text-gray-600">|</span>
+  <a
+    href={lang === 'pt' ? basePath : switchPath}
+    class:list={[
+      'px-1.5 py-0.5 transition-colors duration-150',
+      lang === 'pt'
+        ? 'text-blue-terminal font-bold'
+        : 'text-gray-500 hover:text-white',
+    ]}
+  >
+    PT
+  </a>
+</div>

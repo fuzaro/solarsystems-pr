@@ -1,0 +1,34 @@
+---
+/* PlanetCard — Displays a planet/service node with colored header and status */
+interface Props {
+  title: string;
+  name: string;
+  status?: string;
+  icon?: string;
+  variant?: 'orange' | 'blue' | 'gold' | 'green';
+}
+const { title, name, status = 'OPTIMIZED', icon = '◆', variant = 'blue' } = Astro.props;
+
+const variantClasses: Record<string, string> = {
+  orange: 'bg-orange-alert',
+  blue: 'bg-blue-terminal',
+  gold: 'bg-gold-warning',
+  green: 'bg-green-600',
+};
+---
+<div class="bg-white rounded shadow-sm card-hover overflow-hidden font-mono">
+  <!-- Colored header bar -->
+  <div class:list={[variantClasses[variant], 'px-4 py-2 flex items-center justify-between']}>
+    <span class="text-white text-xs tracking-[0.2em] font-bold">{title}</span>
+    <span class="text-white/70 text-sm">{icon}</span>
+  </div>
+  <!-- Body -->
+  <div class="px-4 py-5 text-center">
+    <div class="text-3xl mb-3 text-navy-dark">{icon}</div>
+    <div class="text-sm tracking-[0.15em] text-navy-dark font-bold mb-2">{name}</div>
+    <div class="text-[10px] tracking-wider text-gray-500">
+      STATUS: <span class="text-green-500">{status}</span>
+    </div>
+  </div>
+  <slot />
+</div>

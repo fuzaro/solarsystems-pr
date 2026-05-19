@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "home": "INÍCIO",
+    "why": "POR_QUE",
+    "how": "COMO_FUNCIONA",
+    "principles": "PRINCÍPIOS",
+    "status": "STATUS",
+    "about": "SOBRE"
+  },
+  "home": {
+    "badge": "PROTOCOLO OPERACIONAL ATIVO",
+    "title": "SOLAR SYSTEMS AI",
+    "subtitle": "PLATAFORMA",
+    "description": "A interface de comando definitiva para processamento de dados em larga escala. Orquestrando agentes de IA com precisão, transformando fluxos complexos em uma arquitetura robusta de cartões perfurados virtuais.",
+    "cta_primary": "INICIALIZAR_CORE",
+    "cta_secondary": "PROTOCOLOS"
+  },
+  "why": {
+    "headline": "POR_QUE_CONSTRUÍMOS",
+    "problem_title": "O_PROBLEMA",
+    "problem_text": "Profissionais do conhecimento perdem horas diárias em tarefas que não exigem julgamento humano. Processamento manual de dados, triagem de filas, navegação de fluxos — tempo roubado da criatividade, dos relacionamentos e da presença.",
+    "insight_title": "A_INTUIÇÃO",
+    "insight_text": "As pessoas não estão esgotadas porque carecem de ferramentas. Estão esgotadas porque suas ferramentas exigem atenção constante. A melhor infraestrutura é aquela que você deixa de notar.",
+    "answer_title": "NOSSA_RESPOSTA",
+    "answer_text": "Solar Systems AI elimina inteiramente o trabalho não-humano — com responsabilização, rastreabilidade e limites. Infraestrutura que desaparece, devolvendo tempo para o que só humanos podem fazer.",
+    "stat_subsystems": "9 subsistemas operacionais",
+    "stat_lifecycle": "7 etapas do ciclo de conformidade",
+    "stat_principles": "6 princípios inegociáveis",
+    "stat_audits": "Zero execuções sem auditoria"
+  },
+  "how": {
+    "headline": "COMO_FUNCIONA",
+    "lifecycle_title": "A_JORNADA_DE_7_ETAPAS",
+    "lifecycle_steps": [
+      { "number": "01", "name": "INTAKE", "description": "Sua solicitação entra no sistema" },
+      { "number": "02", "name": "ADEQUATION", "description": "O agente certo é selecionado para sua tarefa" },
+      { "number": "03", "name": "PREPARATION", "description": "Um ambiente seguro e isolado é provisionado" },
+      { "number": "04", "name": "EXECUTION", "description": "Seu agente trabalha dentro de limites estritos" },
+      { "number": "05", "name": "EVALUATION", "description": "A qualidade da saída é verificada antes da entrega" },
+      { "number": "06", "name": "DELIVERY", "description": "Os resultados são retornados a você" },
+      { "number": "07", "name": "AUDIT", "description": "Um registro imutável de conformidade é criado" }
+    ],
+    "architecture_title": "ARQUITETURA_DO_SISTEMA",
+    "planets": [
+      { "title": "CORE_ORCHESTRATOR", "name": "SUN", "description": "Roteia tarefas, gerencia o ciclo de vida", "icon": "☀", "variant": "orange", "status": "OTIMIZADO" },
+      { "title": "MEMORY_AND_AUDIT", "name": "MOON", "description": "Armazena conhecimento, mantém registros de conformidade", "icon": "☾", "variant": "blue", "status": "ATIVO" },
+      { "title": "MESSAGING_BUS", "name": "MERCURY", "description": "Gerencia toda a comunicação entre sistemas", "icon": "☿", "variant": "blue", "status": "ATIVO" },
+      { "title": "ENTRY_POINT", "name": "VENUS", "description": "A única porta de entrada. Todas as tarefas passam por aqui.", "icon": "♀", "variant": "gold", "status": "ATIVO" },
+      { "title": "EXECUTION_ENGINE", "name": "MARS", "description": "Provisiona e gerencia contêineres seguros", "icon": "♂", "variant": "orange", "status": "ATIVO" },
+      { "title": "SCALING_LAYER", "name": "JUPITER", "description": "Distribui carga, gerencia capacidade", "icon": "♃", "variant": "green", "status": "PLANEJADO" },
+      { "title": "IDENTITY_AND_GOVERNANCE", "name": "SATURN", "description": "Gerencia quem pode fazer o quê, acompanha orçamentos", "icon": "♄", "variant": "gold", "status": "ATIVO" },
+      { "title": "EXPERIMENTATION", "name": "URANUS", "description": "Testes seguros de novas capacidades", "icon": "♅", "variant": "green", "status": "PLANEJADO" },
+      { "title": "INFERENCE_GATEWAY", "name": "NEPTUNE", "description": "Roteia chamadas de IA para provedores otimizados", "icon": "♆", "variant": "blue", "status": "ATIVO" },
+      { "title": "SECURITY_AUTHORITY", "name": "PLUTO", "description": "Gerencia segredos, autorização e criptografia", "icon": "♇", "variant": "orange", "status": "ATIVO" },
+      { "title": "JUDGMENT_PLANE", "name": "THEMIS", "description": "Avalia qualidade e reputação ao longo do tempo", "icon": "⚖", "variant": "gold", "status": "ATIVO" }
+    ]
+  },
+  "principles": {
+    "headline": "PRINCÍPIOS",
+    "subtitle": "Seis garantias. Não aspirações — arquitetura.",
+    "guarantees": [
+      {
+        "title": "ADEQUATION",
+        "tagline": "Agente certo, tarefa certa, sempre.",
+        "description": "Toda tarefa é perfilada antes da execução — não adivinhada. O sistema seleciona o agente ideal com base nas características da tarefa, garantindo qualidade consistente sem configuração manual.",
+        "variant": "blue"
+      },
+      {
+        "title": "EFFORT_CONTROL",
+        "tagline": "Toda tarefa declara seu custo antes de executar.",
+        "description": "Sem processos descontrolados, sem surpresas na fatura. Toda execução possui um orçamento pré-declarado de tempo, recursos e operações. Se o orçamento for excedido, a tarefa é encerrada com segurança.",
+        "variant": "orange"
+      },
+      {
+        "title": "SECURITY",
+        "tagline": "Credenciais são efêmeras, limitadas e nunca armazenadas.",
+        "description": "Segredos existem apenas durante a execução de uma tarefa e apenas no escopo onde são necessários. Sem chaves estáticas, sem acesso permanente, sem vazamento de credenciais.",
+        "variant": "green"
+      },
+      {
+        "title": "PRIVILEGE_CONTROL",
+        "tagline": "Agentes veem apenas o que precisam.",
+        "description": "Acesso é conquistado, não assumido. Todo agente opera sob modos estritos de privilégio — de totalmente supervisionado a autônomo — com limites que não podem ser sobrepostos internamente.",
+        "variant": "gold"
+      },
+      {
+        "title": "QUALITY_CONTROL",
+        "tagline": "Toda saída é avaliada antes da entrega.",
+        "description": "Nada chega a você sem passar pelos portões de qualidade. Pontos de verificação pré-execução, durante a execução e pós-execução garantem resultados consistentes e confiáveis.",
+        "variant": "blue"
+      },
+      {
+        "title": "IDEMPOTENCY",
+        "tagline": "Execute duas vezes, obtenha o mesmo resultado.",
+        "description": "A mesma operação aplicada múltiplas vezes produz o mesmo resultado. Seu sistema é resiliente a retentivas, reinicializações e falhas de rede por projeto.",
+        "variant": "green"
+      }
+    ]
+  },
+  "status": {
+    "headline": "STATUS",
+    "subtitle": "Registro operacional. Marcos verificados.",
+    "milestones": [
+      { "timestamp": "2026-05-07", "level": "ATIVO", "message": "AGENT_DELEGATION — Agentes podem delegar sub-tarefas autonomamente a trabalhadores especializados" },
+      { "timestamp": "2026-05-06", "level": "ATIVO", "message": "JUDGMENT_SYSTEM — Avaliação de qualidade operacional com convergência estatística confirmada" },
+      { "timestamp": "2026-05-04", "level": "ATIVO", "message": "REPUTATION_ENGINE — Rastreamento de desempenho em 121 ciclos de avaliação" },
+      { "timestamp": "2026-04-25", "level": "ATIVO", "message": "FULL_LIFECYCLE — Pipeline de conformidade ponta-a-ponta de 7 etapas operacional" },
+      { "timestamp": "2026-04-23", "level": "ATIVO", "message": "SECURITY_LAYER — Autorização, gerenciamento de segredos e emissão de tokens ativos" },
+      { "timestamp": "2026-04-22", "level": "ATIVO", "message": "MEMORY_SYSTEM — Armazenamento unificado de conhecimento com desduplicação e cadeia de auditoria" },
+      { "timestamp": "2026-04-21", "level": "ATIVO", "message": "MESSAGING_LAYER — Infraestrutura de streaming de eventos com 6 canais de comunicação" },
+      { "timestamp": "2026-04-20", "level": "ATIVO", "message": "GOVERNANCE — Gerenciamento de identidade, rastreamento de orçamento e encaminhamento de conformidade ativos" },
+      { "timestamp": "2026-04-18", "level": "ATIVO", "message": "MONITORING_BRIDGE — Integração de telemetria de hardware operacional" }
+    ],
+    "system_status": "STATUS_DO_SISTEMA: 9/11 SUBSISTEMAS OPERACIONAIS | 2 PLANEJADOS PARA A PRÓXIMA FASE"
+  },
+  "about": {
+    "headline": "SOBRE",
+    "positioning": "Solar Systems AI é construído sobre a convicção de que a infraestrutura inteligente deve servir a objetivos humanos — não demandar atenção humana. Construímos sistemas que desaparecem da percepção, libertando pessoas para o que mais importa.",
+    "approach": "Toda decisão arquitetural reflete nossa crença de que a automação deve ser delimitada, responsabilizável e a serviço da presença humana. Isto não é 'IA em todo lugar' — é IA precisamente onde ela deve estar.",
+    "team": "DADOS_DA_EQUIPE: CLASSIFICADO"
+  }
+}

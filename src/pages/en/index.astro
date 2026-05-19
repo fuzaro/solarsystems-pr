@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PlanetCard from '../../components/PlanetCard.astro';
+import TerminalFeed from '../../components/TerminalFeed.astro';
+import en from '../../i18n/en.json';
+---
+<BaseLayout title="Solar Systems AI — Home" lang="en" currentPage="home">
+  <section class="max-w-5xl mx-auto">
+    <div class="mb-8">
+      <!-- Status badge -->
+      <div class="inline-flex items-center gap-2 bg-navy-dark text-green-500 font-mono text-[10px] tracking-[0.2em] px-3 py-1.5 rounded mb-4">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+        {en.home.badge}
+      </div>
+
+      <!-- Main heading -->
+      <h1 class="font-mono text-4xl lg:text-5xl tracking-[0.15em] text-navy-dark font-bold leading-tight mb-3">
+        {en.home.title}<br/>
+        <span class="text-blue-terminal">{en.home.subtitle}</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="font-sans text-sm text-gray-600 max-w-lg leading-relaxed mb-6">
+        {en.home.description}
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="flex flex-wrap gap-3">
+        <a href="/en/how" class="inline-flex items-center gap-2 bg-blue-terminal text-white font-mono text-xs tracking-[0.2em] px-5 py-2.5 rounded hover:opacity-90 transition-opacity">
+          ◆ {en.home.cta_primary}
+        </a>
+        <a href="/en/principles" class="inline-flex items-center gap-2 bg-white text-navy-dark font-mono text-xs tracking-[0.2em] px-5 py-2.5 rounded border border-gray-300 hover:border-blue-terminal hover:text-blue-terminal transition-colors">
+          ◇ {en.home.cta_secondary}
+        </a>
+      </div>
+    </div>
+
+    <!-- Planet Cards Row -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <PlanetCard
+        title="CORE_ORCHESTRATOR"
+        name="SUN"
+        status="OPTIMIZED"
+        icon="☀"
+        variant="orange"
+      />
+      <PlanetCard
+        title="INFERENCE_GATEWAY"
+        name="NEPTUNE"
+        status="ACTIVE"
+        icon="♆"
+        variant="blue"
+      />
+      <PlanetCard
+        title="JUDGMENT_PLANE"
+        name="THEMIS"
+        status="ACTIVE"
+        icon="⚖"
+        variant="gold"
+      />
+    </div>
+
+    <!-- Terminal Feed -->
+    <div class="max-w-2xl">
+      <TerminalFeed />
+    </div>
+  </section>
+</BaseLayout>

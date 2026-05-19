@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GuaranteeCard from '../../components/GuaranteeCard.astro';
+import en from '../../i18n/en.json';
+---
+<BaseLayout title="Solar Systems AI — Principles" lang="en" currentPage="principles">
+  <section class="max-w-5xl mx-auto">
+    <!-- Headline -->
+    <div class="mb-10">
+      <h1 class="font-mono text-2xl font-bold tracking-widest text-blue-terminal mb-2">◇ {en.principles.headline}</h1>
+      <p class="font-sans text-sm text-gray-500">{en.principles.subtitle}</p>
+    </div>
+
+    <!-- Guarantee Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {en.principles.guarantees.map((g) => (
+        <GuaranteeCard
+          title={g.title}
+          tagline={g.tagline}
+          description={g.description}
+          variant={g.variant}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

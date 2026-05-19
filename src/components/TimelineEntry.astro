@@ -1,0 +1,22 @@
+---
+/* TimelineEntry — A terminal log line style timeline entry */
+interface Props {
+  timestamp: string;
+  level: 'INFO' | 'WARN' | 'LIVE' | 'AUDIT';
+  message: string;
+}
+const { timestamp, level, message } = Astro.props;
+
+const levelColors: Record<string, string> = {
+  INFO: 'text-green-500',
+  WARN: 'text-gold-warning',
+  LIVE: 'text-blue-terminal',
+  AUDIT: 'text-orange-alert',
+};
+---
+<div class="font-mono text-xs flex items-start gap-2 py-1">
+  <span class="text-gray-500 shrink-0">{timestamp}</span>
+  <span class:list={[levelColors[level], 'shrink-0 font-bold']}>[{level}]</span>
+  <span class="text-gray-700">{message}</span>
+  <slot />
+</div>

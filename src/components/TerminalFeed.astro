@@ -1,0 +1,177 @@
+---
+/* TerminalFeed — Animated terminal replay with typewriter effect */
+interface Props {
+  lines?: Array<{ time: string; level: string; message: string }>;
+  title?: string;
+}
+
+const defaultLines = [
+  { time: '12:04:01', level: 'RECV', message: 'TASK_RECEIVED — Processing request #8849' },
+  { time: '12:04:02', level: 'INFO', message: 'ADEQUATION_COMPLETE — Agent profiled, budget allocated' },
+  { time: '12:04:03', level: 'INFO', message: 'CONTAINER_PROVISIONED — Secure environment ready' },
+  { time: '12:04:05', level: 'EXEC', message: 'AGENT_RUNNING — Processing within boundaries...' },
+  { time: '12:04:08', level: 'EXEC', message: 'TOOLS_INVOKED — 3 operations completed' },
+  { time: '12:04:10', level: 'INFO', message: 'EVALUATION_PASSED — Quality gates cleared' },
+  { time: '12:04:11', level: 'INFO', message: 'RESULT_DELIVERED — Output available' },
+  { time: '12:04:12', level: 'AUDIT', message: 'COMPLIANCE_LOGGED — Immutable record #8849 written' },
+  { time: '12:04:13', level: 'IDLE', message: 'AWAITING_NEXT_INSTRUCTION_' },
+];
+
+const { lines = defaultLines, title = 'LIVE_PROCESS_FEED' } = Astro.props;
+
+const levelColors: Record<string, string> = {
+  RECV: 'text-cyan-400',
+  INFO: 'text-green-500',
+  EXEC: 'text-blue-terminal',
+  AUDIT: 'text-orange-alert',
+  IDLE: 'text-gray-500',
+};
+---
+<div class="terminal-feed bg-navy-dark rounded-lg overflow-hidden font-mono shadow-md" data-lines={JSON.stringify(lines)}>
+  <!-- Title bar -->
+  <div class="flex items-center gap-3 px-4 py-2 bg-navy-dark border-b border-gray-700">
+    <span class="w-2.5 h-2.5 rounded-full bg-red-500 shrink-0"></span>
+    <span class="text-[10px] text-gray-400 tracking-[0.2em] font-bold">{title}</span>
+    <div class="ml-auto text-gray-600 hover:text-gray-400 cursor-pointer transition-colors">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+      </svg>
+    </div>
+  </div>
+  <!-- Feed body -->
+  <div class="terminal-body px-4 py-3 overflow-auto max-h-64 space-y-1 relative min-h-[120px]">
+    <noscript>
+      {lines.map((line) => (
+        <div class="text-xs leading-relaxed">
+          <span class="text-gray-500">{line.time} </span>
+          <span class:list={[levelColors[line.level] || 'text-gray-300', 'font-bold']}>{'[' + line.level + ']'}</span>
+          <span class="text-gray-300">{' ' + line.message}</span>
+        </div>
+      ))}
+      <div class="text-xs text-green-500 blink-cursor"></div>
+    </noscript>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const LEVEL_COLORS = {
+      RECV: 'text-cyan-400',
+      INFO: 'text-green-500',
+      EXEC: 'text-blue-terminal',
+      AUDIT: 'text-orange-alert',
+      IDLE: 'text-gray-500',
+    };
+
+    const LINE_DELAY = 400;
+    const CHAR_DELAY = 18;
+    const LOOP_PAUSE = 3000;
+
+    function initFeed(feed) {
+      const body = feed.querySelector('.terminal-body');
+      if (!body) return;
+
+      let lines = [];
+      try {
+        lines = JSON.parse(feed.dataset.lines || '[]');
+      } catch {
+        return;
+      }
+
+      let lineIndex = 0;
+      let timer = null;
+
+      function clearAll() {
+        const children = Array.from(body.children);
+        children.forEach((child) => {
+          if (child.tagName !== 'NOSCRIPT') {
+            body.removeChild(child);
+          }
+        });
+        lineIndex = 0;
+        if (timer) clearTimeout(timer);
+      }
+
+      function createCursor() {
+        const existing = body.querySelector('.terminal-cursor');
+        if (existing) existing.remove();
+        const cursor = document.createElement('div');
+        cursor.className = 'terminal-cursor text-xs text-green-500 blink-cursor';
+        body.appendChild(cursor);
+        body.scrollTop = body.scrollHeight;
+      }
+
+      function typeLine() {
+        if (lineIndex >= lines.length) {
+          createCursor();
+          timer = setTimeout(() => {
+            clearAll();
+            typeLine();
+          }, LOOP_PAUSE);
+          return;
+        }
+
+        const line = lines[lineIndex];
+        const timeText = line.time + ' ';
+        const levelText = '[' + line.level + ']';
+        const messageText = ' ' + line.message;
+        const fullText = timeText + levelText + messageText;
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'text-xs leading-relaxed';
+
+        const timeSpan = document.createElement('span');
+        timeSpan.className = 'text-gray-500';
+
+        const levelSpan = document.createElement('span');
+        levelSpan.className = (LEVEL_COLORS[line.level] || 'text-gray-300') + ' font-bold';
+
+        const messageSpan = document.createElement('span');
+        messageSpan.className = 'text-gray-300';
+
+        wrapper.appendChild(timeSpan);
+        wrapper.appendChild(levelSpan);
+        wrapper.appendChild(messageSpan);
+        body.appendChild(wrapper);
+
+        let charIdx = 0;
+
+        function typeChar() {
+          if (charIdx >= fullText.length) {
+            lineIndex++;
+            body.scrollTop = body.scrollHeight;
+            timer = setTimeout(typeLine, LINE_DELAY);
+            return;
+          }
+
+          const ch = fullText[charIdx];
+          if (charIdx < timeText.length) {
+            timeSpan.textContent += ch;
+          } else if (charIdx < timeText.length + levelText.length) {
+            levelSpan.textContent += ch;
+          } else {
+            messageSpan.textContent += ch;
+          }
+
+          charIdx++;
+          body.scrollTop = body.scrollHeight;
+          timer = setTimeout(typeChar, CHAR_DELAY);
+        }
+
+        typeChar();
+      }
+
+      typeLine();
+    }
+
+    function init() {
+      document.querySelectorAll('.terminal-feed').forEach(initFeed);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

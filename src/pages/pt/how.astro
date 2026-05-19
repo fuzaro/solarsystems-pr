@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PlanetCard from '../../components/PlanetCard.astro';
+import pt from '../../i18n/pt.json';
+---
+<BaseLayout title="Solar Systems AI — Como Funciona" lang="pt" currentPage="how">
+  <section class="max-w-5xl mx-auto">
+    <!-- Headline -->
+    <div class="mb-10">
+      <h1 class="font-mono text-2xl font-bold tracking-widest text-blue-terminal mb-2">◇ {pt.how.headline}</h1>
+      <p class="font-sans text-sm text-gray-500">Da solicitação ao resultado. Cada etapa contabilizada.</p>
+    </div>
+
+    <!-- 7-Step Lifecycle -->
+    <div class="mb-12">
+      <h2 class="font-mono text-xs tracking-[0.2em] text-navy-dark font-bold mb-6">◆ {pt.how.lifecycle_title}</h2>
+      <div class="space-y-0">
+        {pt.how.lifecycle_steps.map((step, index) => (
+          <div class="flex items-start gap-4 bg-white rounded shadow-sm px-5 py-4 mb-3">
+            <div class="shrink-0">
+              <div class="w-10 h-10 rounded-full bg-navy-dark flex items-center justify-center text-white font-mono text-xs font-bold">
+                {step.number}
+              </div>
+            </div>
+            <div>
+              <div class="font-mono text-sm text-blue-terminal font-bold tracking-wider mb-1">{step.name}</div>
+              <p class="font-sans text-sm text-gray-600">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Architecture -->
+    <div class="mb-8">
+      <h2 class="font-mono text-xs tracking-[0.2em] text-navy-dark font-bold mb-6">◆ {pt.how.architecture_title}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {pt.how.planets.map((planet) => (
+          <PlanetCard
+            title={planet.title}
+            name={planet.name}
+            status={planet.status}
+            icon={planet.icon}
+            variant={planet.variant}
+          >
+            <div class="px-4 pb-4">
+              <p class="text-xs text-gray-600 font-sans leading-relaxed">{planet.description}</p>
+            </div>
+          </PlanetCard>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

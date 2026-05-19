@@ -1,0 +1,87 @@
+---
+/* Nav — Top navigation bar with logo, links, and language switcher */
+interface Props {
+  lang?: string;
+  currentPage?: string;
+}
+const { lang = 'en', currentPage = '' } = Astro.props;
+
+const links = [
+  { href: `/${lang}/`, label: 'HOME', id: 'home' },
+  { href: `/${lang}/why`, label: 'WHY', id: 'why' },
+  { href: `/${lang}/how`, label: 'HOW_IT_WORKS', id: 'how' },
+  { href: `/${lang}/principles`, label: 'PRINCIPLES', id: 'principles' },
+  { href: `/${lang}/status`, label: 'STATUS', id: 'status' },
+  { href: `/${lang}/about`, label: 'ABOUT', id: 'about' },
+];
+---
+<nav class="bg-navy-dark text-white font-mono">
+  <div class="flex items-center justify-between px-6 py-3">
+    <!-- Logo -->
+    <a href={`/${lang}/`} class="flex items-center gap-3 group">
+      <div class="w-8 h-8 bg-blue-terminal rounded flex items-center justify-center text-xs font-bold group-hover:opacity-90 transition-opacity">
+        SS
+      </div>
+      <span class="text-sm tracking-[0.3em] font-bold">SOLAR SYSTEMS AI</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <div class="hidden md:flex items-center gap-1">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'px-3 py-2 text-xs tracking-wider transition-colors duration-150',
+            currentPage === link.id
+              ? 'text-orange-alert border-b-2 border-orange-alert'
+              : 'text-gray-400 hover:text-white',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <!-- Right side: language switcher + mobile hamburger -->
+    <div class="flex items-center gap-4">
+      <slot name="lang-switcher" />
+      <!-- Mobile hamburger -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden text-gray-400 hover:text-white transition-colors"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-700">
+    <div class="px-4 py-2 space-y-1">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'block px-3 py-2 text-xs tracking-wider transition-colors duration-150',
+            currentPage === link.id
+              ? 'text-orange-alert bg-gray-800'
+              : 'text-gray-400 hover:text-white hover:bg-gray-800',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

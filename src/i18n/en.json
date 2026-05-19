@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "home": "HOME",
+    "why": "WHY",
+    "how": "HOW_IT_WORKS",
+    "principles": "PRINCIPLES",
+    "status": "STATUS",
+    "about": "ABOUT"
+  },
+  "home": {
+    "badge": "OPERATIONAL PROTOCOL ACTIVE",
+    "title": "SOLAR SYSTEMS AI",
+    "subtitle": "PLATFORM",
+    "description": "The definitive command interface for large-scale data processing. Orchestrating AI agents with precision, transforming complex workflows into a robust architecture of virtual punch cards.",
+    "cta_primary": "INITIALIZE_CORE",
+    "cta_secondary": "PROTOCOLS"
+  },
+  "why": {
+    "headline": "WHY_WE_BUILD",
+    "problem_title": "THE_PROBLEM",
+    "problem_text": "Modern knowledge workers lose hours daily to tasks that don't require human judgment. Manual data processing, queue triage, workflow navigation — time stolen from creativity, relationships, and presence.",
+    "insight_title": "THE_INSIGHT",
+    "insight_text": "People aren't depleted because they lack tools. They're depleted because their tools demand constant attention. The best infrastructure is the kind you stop noticing.",
+    "answer_title": "OUR_ANSWER",
+    "answer_text": "Solar Systems AI removes the non-human work entirely — with accountability, auditability, and bounds. Infrastructure that disappears, giving back time for what only humans can do.",
+    "stat_subsystems": "9 operational subsystems",
+    "stat_lifecycle": "7-step compliance lifecycle",
+    "stat_principles": "6 non-negotiable principles",
+    "stat_audits": "Zero unaudited executions"
+  },
+  "how": {
+    "headline": "HOW_IT_WORKS",
+    "lifecycle_title": "THE_7_STEP_JOURNEY",
+    "lifecycle_steps": [
+      { "number": "01", "name": "INTAKE", "description": "Your request enters the system" },
+      { "number": "02", "name": "ADEQUATION", "description": "The right agent is selected for your task" },
+      { "number": "03", "name": "PREPARATION", "description": "A secure, isolated environment is provisioned" },
+      { "number": "04", "name": "EXECUTION", "description": "Your agent works within strict boundaries" },
+      { "number": "05", "name": "EVALUATION", "description": "Output quality is verified before delivery" },
+      { "number": "06", "name": "DELIVERY", "description": "Results are returned to you" },
+      { "number": "07", "name": "AUDIT", "description": "An immutable compliance record is created" }
+    ],
+    "architecture_title": "SYSTEM_ARCHITECTURE",
+    "planets": [
+      { "title": "CORE_ORCHESTRATOR", "name": "SUN", "description": "Routes tasks, manages lifecycle", "icon": "☀", "variant": "orange", "status": "OPTIMIZED" },
+      { "title": "MEMORY_AND_AUDIT", "name": "MOON", "description": "Stores knowledge, maintains compliance records", "icon": "☾", "variant": "blue", "status": "ACTIVE" },
+      { "title": "MESSAGING_BUS", "name": "MERCURY", "description": "Handles all inter-system communication", "icon": "☿", "variant": "blue", "status": "ACTIVE" },
+      { "title": "ENTRY_POINT", "name": "VENUS", "description": "The only door in. All tasks enter here.", "icon": "♀", "variant": "gold", "status": "ACTIVE" },
+      { "title": "EXECUTION_ENGINE", "name": "MARS", "description": "Provisions and manages secure containers", "icon": "♂", "variant": "orange", "status": "ACTIVE" },
+      { "title": "SCALING_LAYER", "name": "JUPITER", "description": "Distributes load, manages capacity", "icon": "♃", "variant": "green", "status": "PLANNED" },
+      { "title": "IDENTITY_AND_GOVERNANCE", "name": "SATURN", "description": "Manages who can do what, tracks budgets", "icon": "♄", "variant": "gold", "status": "ACTIVE" },
+      { "title": "EXPERIMENTATION", "name": "URANUS", "description": "Safe testing of new capabilities", "icon": "♅", "variant": "green", "status": "PLANNED" },
+      { "title": "INFERENCE_GATEWAY", "name": "NEPTUNE", "description": "Routes AI calls to optimal providers", "icon": "♆", "variant": "blue", "status": "ACTIVE" },
+      { "title": "SECURITY_AUTHORITY", "name": "PLUTO", "description": "Manages secrets, authorization, encryption", "icon": "♇", "variant": "orange", "status": "ACTIVE" },
+      { "title": "JUDGMENT_PLANE", "name": "THEMIS", "description": "Evaluates quality and reputation over time", "icon": "⚖", "variant": "gold", "status": "ACTIVE" }
+    ]
+  },
+  "principles": {
+    "headline": "PRINCIPLES",
+    "subtitle": "Six guarantees. Not aspirations — architecture.",
+    "guarantees": [
+      {
+        "title": "ADEQUATION",
+        "tagline": "Right agent, right task, every time.",
+        "description": "Every task is profiled before execution — not guessed. The system selects the optimal agent based on task characteristics, ensuring consistent quality without manual configuration.",
+        "variant": "blue"
+      },
+      {
+        "title": "EFFORT_CONTROL",
+        "tagline": "Every task declares its cost before running.",
+        "description": "No runaway processes, no surprise bills. Every execution has a pre-declared budget for time, resources, and operations. If the budget is exceeded, the task is safely terminated.",
+        "variant": "orange"
+      },
+      {
+        "title": "SECURITY",
+        "tagline": "Credentials are short-lived, scoped, and never stored.",
+        "description": "Secrets exist only for the duration of a task and only in the scope where they're needed. No static keys, no permanent access, no credential leakage.",
+        "variant": "green"
+      },
+      {
+        "title": "PRIVILEGE_CONTROL",
+        "tagline": "Agents see only what they need.",
+        "description": "Access is earned, not assumed. Every agent operates under strict privilege modes — from fully supervised to autonomous — with boundaries that cannot be overridden from within.",
+        "variant": "gold"
+      },
+      {
+        "title": "QUALITY_CONTROL",
+        "tagline": "Every output is evaluated before delivery.",
+        "description": "Nothing reaches you without passing quality gates. Pre-execution, mid-execution, and post-execution checkpoints ensure consistent, reliable results.",
+        "variant": "blue"
+      },
+      {
+        "title": "IDEMPOTENCY",
+        "tagline": "Run it twice, get the same result.",
+        "description": "The same operation applied multiple times produces the same outcome. Your system is resilient to retries, restarts, and network failures by design.",
+        "variant": "green"
+      }
+    ]
+  },
+  "status": {
+    "headline": "STATUS",
+    "subtitle": "Operational log. Verified milestones.",
+    "milestones": [
+      { "timestamp": "2026-05-07", "level": "LIVE", "message": "AGENT_DELEGATION — Agents can autonomously delegate sub-tasks to specialized workers" },
+      { "timestamp": "2026-05-06", "level": "LIVE", "message": "JUDGMENT_SYSTEM — Quality assessment operational with statistical convergence confirmed" },
+      { "timestamp": "2026-05-04", "level": "LIVE", "message": "REPUTATION_ENGINE — Performance tracking across 121 evaluation cycles" },
+      { "timestamp": "2026-04-25", "level": "LIVE", "message": "FULL_LIFECYCLE — End-to-end 7-step compliance pipeline operational" },
+      { "timestamp": "2026-04-23", "level": "LIVE", "message": "SECURITY_LAYER — Authorization, secrets management, and token issuance active" },
+      { "timestamp": "2026-04-22", "level": "LIVE", "message": "MEMORY_SYSTEM — Unified knowledge store with deduplication and audit chain" },
+      { "timestamp": "2026-04-21", "level": "LIVE", "message": "MESSAGING_LAYER — Event streaming infrastructure with 6 communication channels" },
+      { "timestamp": "2026-04-20", "level": "LIVE", "message": "GOVERNANCE — Identity management, budget tracking, and compliance forwarding active" },
+      { "timestamp": "2026-04-18", "level": "LIVE", "message": "MONITORING_BRIDGE — Hardware telemetry integration operational" }
+    ],
+    "system_status": "SYSTEM_STATUS: 9/11 SUBSYSTEMS OPERATIONAL | 2 PLANNED FOR NEXT PHASE"
+  },
+  "about": {
+    "headline": "ABOUT",
+    "positioning": "Solar Systems AI is built on the conviction that intelligent infrastructure should serve human ends — not demand human attention. We build systems that disappear from notice, freeing people for what matters most.",
+    "approach": "Every architectural decision reflects our belief that automation must be bounded, accountable, and in service of human presence. This is not 'AI everywhere' — this is AI precisely where it belongs.",
+    "team": "TEAM_DATA: CLASSIFIED"
+  }
+}

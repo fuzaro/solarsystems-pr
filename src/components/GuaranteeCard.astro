@@ -1,0 +1,37 @@
+---
+/* GuaranteeCard — Displays a commitment/guarantee with retro styling */
+interface Props {
+  title: string;
+  tagline: string;
+  description: string;
+  variant?: 'orange' | 'blue' | 'gold' | 'green';
+}
+const { title, tagline, description, variant = 'blue' } = Astro.props;
+
+const variantColors: Record<string, string> = {
+  orange: 'border-orange-alert text-orange-alert',
+  blue: 'border-blue-terminal text-blue-terminal',
+  gold: 'border-gold-warning text-gold-warning',
+  green: 'border-green-600 text-green-600',
+};
+
+const variantBg: Record<string, string> = {
+  orange: 'bg-orange-alert',
+  blue: 'bg-blue-terminal',
+  gold: 'bg-gold-warning',
+  green: 'bg-green-600',
+};
+---
+<div class="bg-white rounded shadow-sm card-hover overflow-hidden font-mono">
+  <!-- Top accent line -->
+  <div class:list={[variantBg[variant], 'h-1']}></div>
+  <div class="px-4 py-4">
+    <div class="flex items-center gap-2 mb-2">
+      <span class:list={[variantColors[variant], 'text-sm']}>◆</span>
+      <h3 class="text-xs tracking-[0.2em] text-navy-dark font-bold">{title}</h3>
+    </div>
+    <p class="text-sm text-navy-dark font-bold tracking-wider mb-2">{tagline}</p>
+    <p class="text-xs text-gray-600 leading-relaxed">{description}</p>
+    <slot />
+  </div>
+</div>
