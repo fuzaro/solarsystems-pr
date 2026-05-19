@@ -5,13 +5,14 @@ interface Props {
   currentPage?: string;
 }
 const { lang = 'en', currentPage = '' } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL.slice(0, -1) : import.meta.env.BASE_URL;
 
 const menuItems = [
-  { id: 'home', label: 'SYSTEM_CORE', icon: '⚙', href: `/${lang}/` },
-  { id: 'why', label: 'AGENT_NODES', icon: '⬡', href: `/${lang}/why` },
-  { id: 'how', label: 'TASK_QUEUE', icon: '☰', href: `/${lang}/how` },
-  { id: 'principles', label: 'MEMORY_BANK', icon: '◉', href: `/${lang}/principles` },
-  { id: 'status', label: 'DIAGNOSTICS', icon: '▦', href: `/${lang}/status` },
+  { id: 'home', label: 'SYSTEM_CORE', icon: '⚙', href: `${base}/${lang}/` },
+  { id: 'why', label: 'AGENT_NODES', icon: '⬡', href: `${base}/${lang}/why` },
+  { id: 'how', label: 'TASK_QUEUE', icon: '☰', href: `${base}/${lang}/how` },
+  { id: 'principles', label: 'MEMORY_BANK', icon: '◉', href: `${base}/${lang}/principles` },
+  { id: 'status', label: 'DIAGNOSTICS', icon: '▦', href: `${base}/${lang}/status` },
 ];
 ---
 <!-- Mobile sidebar overlay -->
