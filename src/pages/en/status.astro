@@ -7,16 +7,16 @@ import en from '../../i18n/en.json';
   <section class="max-w-4xl mx-auto">
     <!-- Headline -->
     <div class="mb-10">
-      <h1 class="font-mono text-2xl font-bold tracking-widest text-blue-terminal mb-2">◇ {en.status.headline}</h1>
-      <p class="font-sans text-sm text-gray-500">{en.status.subtitle}</p>
+      <h1 class="font-display text-2xl font-bold tracking-widest text-theme-accent mb-2">◇ {en.status.headline}</h1>
+      <p class="font-sans text-sm text-theme-muted">{en.status.subtitle}</p>
     </div>
 
     <!-- Terminal-style timeline -->
-    <div class="bg-navy-dark rounded-lg overflow-hidden shadow-md mb-8">
+    <div class="bg-theme-terminal rounded-lg overflow-hidden shadow-md mb-8">
       <!-- Title bar -->
-      <div class="flex items-center gap-3 px-4 py-2 bg-navy-dark border-b border-gray-700">
-        <span class="w-2.5 h-2.5 rounded-full bg-green-500 shrink-0"></span>
-        <span class="text-[10px] text-gray-400 tracking-[0.2em] font-bold font-mono">OPERATIONAL_LOG</span>
+      <div class="flex items-center gap-3 px-4 py-2 bg-theme-terminal border-b border-theme-border">
+        <span class="w-2.5 h-2.5 rounded-full bg-theme-success shrink-0"></span>
+        <span class="text-[10px] text-theme-muted tracking-[0.2em] font-bold font-mono">OPERATIONAL_LOG</span>
       </div>
       <!-- Feed body -->
       <div class="px-4 py-3 space-y-1">
@@ -27,10 +27,10 @@ import en from '../../i18n/en.json';
     </div>
 
     <!-- System Status Summary -->
-    <div class="bg-white rounded shadow-sm px-5 py-4 border border-gray-200">
+    <div class="bg-theme-surface rounded shadow-sm px-5 py-4 border border-theme-border">
       <div class="flex items-center gap-3">
-        <span class="inline-block w-2 h-2 rounded-full bg-blue-terminal"></span>
-        <span class="font-mono text-xs tracking-wider text-navy-dark font-bold">{en.status.system_status}</span>
+        <span class="inline-block w-2 h-2 rounded-full bg-theme-accent"></span>
+        <span class="font-mono text-xs tracking-wider text-theme-text font-bold">{en.status.system_status}</span>
       </div>
     </div>
   </section>

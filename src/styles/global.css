@@ -1,65 +1,162 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
 
+@font-face {
+  font-family: 'LazenbyCompLiquid';
+  src: url('../assets/fonts/LazenbyCompLiquid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ===== THEME DEFINITIONS ===== */
+
+:root, [data-theme="light"] {
+  --bg-primary: #F5F0E8;
+  --bg-secondary: #FFFFFF;
+  --bg-terminal: #2B2D33;
+  --text-primary: #2B2D33;
+  --text-secondary: #6B6860;
+  --accent-primary: #3B6FA0;
+  --accent-secondary: #CC3333;
+  --accent-tertiary: #D4960A;
+  --accent-success: #7A9E7E;
+  --accent-warm: #D65E2A;
+  --border: #D4CFC4;
+  --dot-color: #C8C0B4;
+  --nav-bg: #2B2D33;
+  --nav-text: #F5F0E8;
+  --card-header-1: #CC3333;
+  --card-header-2: #3B6FA0;
+  --card-header-3: #D4960A;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1C1E24;
+  --bg-secondary: #2B2D33;
+  --bg-terminal: #0F1014;
+  --text-primary: #E8DCC8;
+  --text-secondary: #9A9488;
+  --accent-primary: #5B9FD0;
+  --accent-secondary: #E85555;
+  --accent-tertiary: #E8B830;
+  --accent-success: #8EBE92;
+  --accent-warm: #E87A4A;
+  --border: #3A3D44;
+  --dot-color: #3A3D44;
+  --nav-bg: #0F1014;
+  --nav-text: #E8DCC8;
+  --card-header-1: #CC3333;
+  --card-header-2: #3B6FA0;
+  --card-header-3: #D4960A;
+}
+
+[data-theme="high-contrast"] {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FFFFFF;
+  --bg-terminal: #000000;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --accent-primary: #0000CC;
+  --accent-secondary: #CC0000;
+  --accent-tertiary: #996600;
+  --accent-success: #006600;
+  --accent-warm: #CC3300;
+  --border: #000000;
+  --dot-color: #999999;
+  --nav-bg: #000000;
+  --nav-text: #FFFFFF;
+  --card-header-1: #CC0000;
+  --card-header-2: #0000CC;
+  --card-header-3: #996600;
+}
+
+[data-theme="phosphor"] {
+  --bg-primary: #0A0F0A;
+  --bg-secondary: #0F1A0F;
+  --bg-terminal: #050A05;
+  --text-primary: #33FF33;
+  --text-secondary: #1A991A;
+  --accent-primary: #33FF33;
+  --accent-secondary: #66FF66;
+  --accent-tertiary: #22CC22;
+  --accent-success: #33FF33;
+  --accent-warm: #44DD44;
+  --border: #1A3A1A;
+  --dot-color: #1A3A1A;
+  --nav-bg: #050A05;
+  --nav-text: #33FF33;
+  --card-header-1: #33FF33;
+  --card-header-2: #22CC22;
+  --card-header-3: #44DD44;
+}
+
+/* ===== BASE STYLES ===== */
+
 @layer base {
   body {
-    @apply font-sans text-navy-dark bg-grid-paper;
-    background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 39px, #e5e7eb 39px, #e5e7eb 40px),
-      repeating-linear-gradient(90deg, transparent, transparent 39px, #e5e7eb 39px, #e5e7eb 40px);
+    @apply font-sans;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    background-image: radial-gradient(circle, var(--dot-color) 1.2px, transparent 1.2px);
+    background-size: 20px 20px;
   }
 
-  ::selection {
-    background-color: #1a5cff;
-    color: #ffffff;
-  }
-
-  ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #1a1f36;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #3b4263;
-    border-radius: 3px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #4c567a;
+  h1, h2, h3 {
+    @apply font-display;
   }
 }
 
-@layer components {
+/* ===== UTILITIES ===== */
+
+@layer utilities {
   .font-retro {
     font-family: 'Share Tech Mono', monospace;
   }
 
   .card-hover {
-    @apply transition-all duration-200;
+    transition: transform 150ms ease, box-shadow 150ms ease;
   }
   .card-hover:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(26, 31, 54, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   .link-hover {
-    @apply transition-colors duration-150;
+    transition: color 150ms ease;
   }
   .link-hover:hover {
-    color: #1a5cff;
+    color: var(--accent-primary);
   }
 
   .blink-cursor::after {
-    content: '▌';
+    content: '█';
     animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
   }
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dot-color);
+  border-radius: 3px;
+}
+
+::selection {
+  background-color: var(--accent-primary);
+  color: var(--nav-text);
 }

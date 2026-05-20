@@ -3,6 +3,7 @@ import Nav from '../components/Nav.astro';
 import Sidebar from '../components/Sidebar.astro';
 import Footer from '../components/Footer.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import ThemeSwitcher from '../components/ThemeSwitcher.astro';
 
 interface Props {
   title?: string;
@@ -17,6 +18,12 @@ const favicon = `${base}/favicon.svg`;
 <!doctype html>
 <html lang={lang}>
   <head>
+    <script is:inline>
+      (function() {
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
@@ -25,6 +32,7 @@ const favicon = `${base}/favicon.svg`;
   <body class="min-h-screen flex flex-col">
     <!-- Top navigation -->
     <Nav lang={lang} currentPage={currentPage}>
+      <ThemeSwitcher slot="theme-switcher" />
       <LanguageSwitcher slot="lang-switcher" lang={lang} />
     </Nav>
 

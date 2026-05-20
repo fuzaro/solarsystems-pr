@@ -20,19 +20,19 @@ const defaultLines = [
 const { lines = defaultLines, title = 'LIVE_PROCESS_FEED' } = Astro.props;
 
 const levelColors: Record<string, string> = {
-  RECV: 'text-cyan-400',
-  INFO: 'text-green-500',
-  EXEC: 'text-blue-terminal',
-  AUDIT: 'text-orange-alert',
-  IDLE: 'text-gray-500',
+  RECV: 'text-theme-accent',
+  INFO: 'text-theme-success',
+  EXEC: 'text-theme-accent',
+  AUDIT: 'text-theme-accent-2',
+  IDLE: 'text-theme-muted',
 };
 ---
-<div class="terminal-feed bg-navy-dark rounded-lg overflow-hidden font-mono shadow-md" data-lines={JSON.stringify(lines)}>
+<div class="terminal-feed bg-theme-terminal rounded-lg overflow-hidden font-mono shadow-md" data-lines={JSON.stringify(lines)}>
   <!-- Title bar -->
-  <div class="flex items-center gap-3 px-4 py-2 bg-navy-dark border-b border-gray-700">
+  <div class="flex items-center gap-3 px-4 py-2 bg-theme-terminal border-b border-theme-border">
     <span class="w-2.5 h-2.5 rounded-full bg-red-500 shrink-0"></span>
-    <span class="text-[10px] text-gray-400 tracking-[0.2em] font-bold">{title}</span>
-    <div class="ml-auto text-gray-600 hover:text-gray-400 cursor-pointer transition-colors">
+    <span class="text-[10px] text-theme-muted tracking-[0.2em] font-bold">{title}</span>
+    <div class="ml-auto text-theme-border hover:text-theme-muted cursor-pointer transition-colors">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
       </svg>
@@ -43,12 +43,12 @@ const levelColors: Record<string, string> = {
     <noscript>
       {lines.map((line) => (
         <div class="text-xs leading-relaxed">
-          <span class="text-gray-500">{line.time} </span>
-          <span class:list={[levelColors[line.level] || 'text-gray-300', 'font-bold']}>{'[' + line.level + ']'}</span>
-          <span class="text-gray-300">{' ' + line.message}</span>
+          <span class="text-theme-muted">{line.time} </span>
+          <span class:list={[levelColors[line.level] || 'text-theme-muted', 'font-bold']}>{'[' + line.level + ']'}</span>
+          <span class="text-theme-text">{' ' + line.message}</span>
         </div>
       ))}
-      <div class="text-xs text-green-500 blink-cursor"></div>
+      <div class="text-xs text-theme-success blink-cursor"></div>
     </noscript>
   </div>
 </div>
@@ -56,11 +56,11 @@ const levelColors: Record<string, string> = {
 <script>
   (function () {
     const LEVEL_COLORS = {
-      RECV: 'text-cyan-400',
-      INFO: 'text-green-500',
-      EXEC: 'text-blue-terminal',
-      AUDIT: 'text-orange-alert',
-      IDLE: 'text-gray-500',
+      RECV: 'text-theme-accent',
+      INFO: 'text-theme-success',
+      EXEC: 'text-theme-accent',
+      AUDIT: 'text-theme-accent-2',
+      IDLE: 'text-theme-muted',
     };
 
     const LINE_DELAY = 400;
@@ -96,7 +96,7 @@ const levelColors: Record<string, string> = {
         const existing = body.querySelector('.terminal-cursor');
         if (existing) existing.remove();
         const cursor = document.createElement('div');
-        cursor.className = 'terminal-cursor text-xs text-green-500 blink-cursor';
+        cursor.className = 'terminal-cursor text-xs text-theme-success blink-cursor';
         body.appendChild(cursor);
         body.scrollTop = body.scrollHeight;
       }
@@ -121,13 +121,13 @@ const levelColors: Record<string, string> = {
         wrapper.className = 'text-xs leading-relaxed';
 
         const timeSpan = document.createElement('span');
-        timeSpan.className = 'text-gray-500';
+        timeSpan.className = 'text-theme-muted';
 
         const levelSpan = document.createElement('span');
-        levelSpan.className = (LEVEL_COLORS[line.level] || 'text-gray-300') + ' font-bold';
+        levelSpan.className = (LEVEL_COLORS[line.level] || 'text-theme-muted') + ' font-bold';
 
         const messageSpan = document.createElement('span');
-        messageSpan.className = 'text-gray-300';
+        messageSpan.className = 'text-theme-text';
 
         wrapper.appendChild(timeSpan);
         wrapper.appendChild(levelSpan);

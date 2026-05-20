@@ -5,26 +5,26 @@ interface Props {
 }
 const { lang = 'en' } = Astro.props;
 ---
-<footer class="bg-gray-100 border-t border-gray-300 px-6 py-4 font-mono">
+<footer class="bg-theme-bg border-t border-theme-border px-6 py-4 font-mono">
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
     <!-- Left branding -->
     <div class="text-center md:text-left">
       <div class="flex items-center gap-2 justify-center md:justify-start">
-        <span class="text-blue-terminal text-sm">◆</span>
-        <span class="text-xs tracking-[0.2em] text-navy-dark font-bold">SOLAR SYSTEMS CORP.</span>
+        <span class="text-theme-accent text-sm">◆</span>
+        <span class="text-xs tracking-[0.2em] text-theme-text font-bold">SOLAR SYSTEMS CORP.</span>
       </div>
-      <div class="text-[10px] text-gray-500 tracking-wider mt-1">
+      <div class="text-[10px] text-theme-muted tracking-wider mt-1">
         &copy; 1978-2026 | ESTABLISHED PROTOCOLS | OPTICAL_READ_INIT
       </div>
     </div>
 
     <!-- Right decorative links -->
-    <div class="flex items-center gap-4 text-[10px] text-gray-500 tracking-wider">
-      <a href="#" class="hover:text-blue-terminal transition-colors">SAFETY_MANUAL</a>
-      <span class="text-gray-300">|</span>
-      <a href="#" class="hover:text-blue-terminal transition-colors">ISO_9001</a>
-      <span class="text-gray-300">|</span>
-      <a href="#" class="hover:text-blue-terminal transition-colors">MAINTENANCE_LOGS</a>
+    <div class="flex items-center gap-4 text-[10px] text-theme-muted tracking-wider">
+      <a href="#" class="hover:text-theme-accent transition-colors">SAFETY_MANUAL</a>
+      <span class="text-theme-border">|</span>
+      <a href="#" class="hover:text-theme-accent transition-colors">ISO_9001</a>
+      <span class="text-theme-border">|</span>
+      <a href="#" class="hover:text-theme-accent transition-colors">MAINTENANCE_LOGS</a>
     </div>
   </div>
 </footer>

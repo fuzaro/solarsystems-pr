@@ -10,24 +10,24 @@ interface Props {
 const { title, name, status = 'OPTIMIZED', icon = '◆', variant = 'blue' } = Astro.props;
 
 const variantClasses: Record<string, string> = {
-  orange: 'bg-orange-alert',
-  blue: 'bg-blue-terminal',
-  gold: 'bg-gold-warning',
-  green: 'bg-green-600',
+  orange: 'bg-theme-card-1',
+  blue: 'bg-theme-card-2',
+  gold: 'bg-theme-card-3',
+  green: 'bg-theme-success',
 };
 ---
-<div class="bg-white rounded shadow-sm card-hover overflow-hidden font-mono">
+<div class="bg-theme-surface rounded shadow-sm card-hover overflow-hidden font-mono">
   <!-- Colored header bar -->
   <div class:list={[variantClasses[variant], 'px-4 py-2 flex items-center justify-between']}>
-    <span class="text-white text-xs tracking-[0.2em] font-bold">{title}</span>
-    <span class="text-white/70 text-sm">{icon}</span>
+    <span class="text-theme-nav-text text-xs tracking-[0.2em] font-bold">{title}</span>
+    <span class="text-theme-nav-text/70 text-sm">{icon}</span>
   </div>
   <!-- Body -->
   <div class="px-4 py-5 text-center">
-    <div class="text-3xl mb-3 text-navy-dark">{icon}</div>
-    <div class="text-sm tracking-[0.15em] text-navy-dark font-bold mb-2">{name}</div>
-    <div class="text-[10px] tracking-wider text-gray-500">
-      STATUS: <span class="text-green-500">{status}</span>
+    <div class="text-3xl mb-3 text-theme-text">{icon}</div>
+    <div class="text-sm tracking-[0.15em] text-theme-text font-bold mb-2">{name}</div>
+    <div class="text-[10px] tracking-wider text-theme-muted">
+      STATUS: <span class="text-theme-success">{status}</span>
     </div>
   </div>
   <slot />

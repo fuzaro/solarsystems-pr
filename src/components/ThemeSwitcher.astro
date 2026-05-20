@@ -1,0 +1,50 @@
+---
+/* Theme switcher — 4 themes: light, dark, high-contrast, phosphor */
+---
+<div class="theme-switcher flex items-center gap-1 font-mono text-[10px] tracking-wider">
+  <button data-set-theme="light" class="theme-btn px-1.5 py-0.5 rounded transition-colors" title="Light theme">
+    LIGHT
+  </button>
+  <span class="text-[var(--text-secondary)]">|</span>
+  <button data-set-theme="dark" class="theme-btn px-1.5 py-0.5 rounded transition-colors" title="Dark theme">
+    DARK
+  </button>
+  <span class="text-[var(--text-secondary)]">|</span>
+  <button data-set-theme="high-contrast" class="theme-btn px-1.5 py-0.5 rounded transition-colors" title="High contrast">
+    HI-CON
+  </button>
+  <span class="text-[var(--text-secondary)]">|</span>
+  <button data-set-theme="phosphor" class="theme-btn px-1.5 py-0.5 rounded transition-colors" title="Phosphor CRT">
+    PHOSPHOR
+  </button>
+</div>
+
+<script>
+  function setTheme(theme: string) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    // Update active button styling
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+      const btnTheme = (btn as HTMLElement).dataset.setTheme;
+      if (btnTheme === theme) {
+        btn.classList.add('text-[var(--accent-primary)]', 'font-bold');
+        btn.classList.remove('text-[var(--text-secondary)]');
+      } else {
+        btn.classList.remove('text-[var(--accent-primary)]', 'font-bold');
+        btn.classList.add('text-[var(--text-secondary)]');
+      }
+    });
+  }
+
+  // Initialize
+  const saved = localStorage.getItem('theme') || 'light';
+  setTheme(saved);
+
+  // Click handlers
+  document.querySelectorAll('.theme-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const theme = (btn as HTMLElement).dataset.setTheme;
+      if (theme) setTheme(theme);
+    });
+  });
+</script>

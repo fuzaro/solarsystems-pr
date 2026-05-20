@@ -9,29 +9,29 @@ interface Props {
 const { title, tagline, description, variant = 'blue' } = Astro.props;
 
 const variantColors: Record<string, string> = {
-  orange: 'border-orange-alert text-orange-alert',
-  blue: 'border-blue-terminal text-blue-terminal',
-  gold: 'border-gold-warning text-gold-warning',
-  green: 'border-green-600 text-green-600',
+  orange: 'border-theme-card-1 text-theme-card-1',
+  blue: 'border-theme-card-2 text-theme-card-2',
+  gold: 'border-theme-card-3 text-theme-card-3',
+  green: 'border-theme-success text-theme-success',
 };
 
 const variantBg: Record<string, string> = {
-  orange: 'bg-orange-alert',
-  blue: 'bg-blue-terminal',
-  gold: 'bg-gold-warning',
-  green: 'bg-green-600',
+  orange: 'bg-theme-card-1',
+  blue: 'bg-theme-card-2',
+  gold: 'bg-theme-card-3',
+  green: 'bg-theme-success',
 };
 ---
-<div class="bg-white rounded shadow-sm card-hover overflow-hidden font-mono">
+<div class="bg-theme-surface rounded shadow-sm card-hover overflow-hidden font-mono">
   <!-- Top accent line -->
   <div class:list={[variantBg[variant], 'h-1']}></div>
   <div class="px-4 py-4">
     <div class="flex items-center gap-2 mb-2">
       <span class:list={[variantColors[variant], 'text-sm']}>◆</span>
-      <h3 class="text-xs tracking-[0.2em] text-navy-dark font-bold">{title}</h3>
+      <h3 class="text-xs tracking-[0.2em] text-theme-text font-bold">{title}</h3>
     </div>
-    <p class="text-sm text-navy-dark font-bold tracking-wider mb-2">{tagline}</p>
-    <p class="text-xs text-gray-600 leading-relaxed">{description}</p>
+    <p class="text-sm text-theme-text font-bold tracking-wider mb-2">{tagline}</p>
+    <p class="text-xs text-theme-muted leading-relaxed">{description}</p>
     <slot />
   </div>
 </div>

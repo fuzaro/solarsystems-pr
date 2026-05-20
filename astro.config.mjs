@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   output: 'static',
-  site: 'https://fuzaro.github.io/solarsystems-pr',
-  base: '/solarsystems-pr',
+  site: 'https://www.solarsystems.ia.br',
+  base: '/',
   integrations: [tailwind()],
 });

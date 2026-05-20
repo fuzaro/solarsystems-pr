@@ -16,11 +16,11 @@ const links = [
   { href: `${base}/${lang}/about`, label: 'ABOUT', id: 'about' },
 ];
 ---
-<nav class="bg-navy-dark text-white font-mono">
+<nav class="bg-theme-nav text-theme-nav-text font-mono">
   <div class="flex items-center justify-between px-6 py-3">
     <!-- Logo -->
     <a href={`${base}/${lang}/`} class="flex items-center gap-3 group">
-      <div class="w-8 h-8 bg-blue-terminal rounded flex items-center justify-center text-xs font-bold group-hover:opacity-90 transition-opacity">
+      <div class="w-8 h-8 bg-theme-accent rounded flex items-center justify-center text-xs font-bold group-hover:opacity-90 transition-opacity">
         SS
       </div>
       <span class="text-sm tracking-[0.3em] font-bold">SOLAR SYSTEMS AI</span>
@@ -34,8 +34,8 @@ const links = [
           class:list={[
             'px-3 py-2 text-xs tracking-wider transition-colors duration-150',
             currentPage === link.id
-              ? 'text-orange-alert border-b-2 border-orange-alert'
-              : 'text-gray-400 hover:text-white',
+              ? 'text-theme-accent-2 border-b-2 border-theme-accent-2'
+              : 'text-theme-muted hover:text-theme-nav-text',
           ]}
         >
           {link.label}
@@ -43,13 +43,14 @@ const links = [
       ))}
     </div>
 
-    <!-- Right side: language switcher + mobile hamburger -->
+    <!-- Right side: theme switcher + language switcher + mobile hamburger -->
     <div class="flex items-center gap-4">
+      <slot name="theme-switcher" />
       <slot name="lang-switcher" />
       <!-- Mobile hamburger -->
       <button
         id="mobile-menu-btn"
-        class="md:hidden text-gray-400 hover:text-white transition-colors"
+        class="md:hidden text-theme-muted hover:text-theme-nav-text transition-colors"
         aria-label="Toggle menu"
       >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +61,7 @@ const links = [
   </div>
 
   <!-- Mobile dropdown -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-700">
+  <div id="mobile-menu" class="hidden md:hidden border-t border-theme-border">
     <div class="px-4 py-2 space-y-1">
       {links.map((link) => (
         <a
@@ -68,8 +69,8 @@ const links = [
           class:list={[
             'block px-3 py-2 text-xs tracking-wider transition-colors duration-150',
             currentPage === link.id
-              ? 'text-orange-alert bg-gray-800'
-              : 'text-gray-400 hover:text-white hover:bg-gray-800',
+              ? 'text-theme-accent-2 bg-theme-terminal'
+              : 'text-theme-muted hover:text-theme-nav-text hover:bg-theme-terminal',
           ]}
         >
           {link.label}

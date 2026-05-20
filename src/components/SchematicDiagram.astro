@@ -25,7 +25,7 @@ const { class: className = '' } = Astro.props;
         refY="3.5"
         orient="auto"
       >
-        <polygon points="0 0, 10 3.5, 0 7" fill="#1a1f36" />
+        <polygon points="0 0, 10 3.5, 0 7" style="fill: var(--text-primary)" />
       </marker>
 
       <!-- Arrow marker for orange active-path connections -->
@@ -37,12 +37,12 @@ const { class: className = '' } = Astro.props;
         refY="3.5"
         orient="auto"
       >
-        <polygon points="0 0, 10 3.5, 0 7" fill="#e85d3a" />
+        <polygon points="0 0, 10 3.5, 0 7" style="fill: var(--accent-warm)" />
       </marker>
 
       <!-- Subtle dot-grid background pattern -->
       <pattern id="dot-grid" width="24" height="24" patternUnits="userSpaceOnUse">
-        <circle cx="1.5" cy="1.5" r="0.8" fill="#c9d1d9" opacity="0.35" />
+        <circle cx="1.5" cy="1.5" r="0.8" style="fill: var(--dot-color)" opacity="0.35" />
       </pattern>
     </defs>
 
@@ -52,33 +52,33 @@ const { class: className = '' } = Astro.props;
     <!-- ==================== CONNECTIONS ==================== -->
     <g id="connections">
       <!-- Primary flow: VENUS → SUN → MARS → RESULT (orange) -->
-      <line x1="170" y1="208" x2="280" y2="208" stroke="#e85d3a" stroke-width="2.5" marker-end="url(#arrow-orange)" />
-      <line x1="400" y1="208" x2="510" y2="208" stroke="#e85d3a" stroke-width="2.5" marker-end="url(#arrow-orange)" />
-      <line x1="630" y1="208" x2="740" y2="208" stroke="#e85d3a" stroke-width="2.5" marker-end="url(#arrow-orange)" />
+      <line x1="170" y1="208" x2="280" y2="208" style="stroke: var(--accent-warm)" stroke-width="2.5" marker-end="url(#arrow-orange)" />
+      <line x1="400" y1="208" x2="510" y2="208" style="stroke: var(--accent-warm)" stroke-width="2.5" marker-end="url(#arrow-orange)" />
+      <line x1="630" y1="208" x2="740" y2="208" style="stroke: var(--accent-warm)" stroke-width="2.5" marker-end="url(#arrow-orange)" />
 
       <!-- SUN → NEPTUNE (navy) -->
-      <line x1="340" y1="180" x2="340" y2="96" stroke="#1a1f36" stroke-width="2" marker-end="url(#arrow-navy)" />
+      <line x1="340" y1="180" x2="340" y2="96" style="stroke: var(--text-primary)" stroke-width="2" marker-end="url(#arrow-navy)" />
 
       <!-- SUN down to horizontal bus -->
-      <line x1="340" y1="236" x2="340" y2="300" stroke="#1a1f36" stroke-width="2" />
+      <line x1="340" y1="236" x2="340" y2="300" style="stroke: var(--text-primary)" stroke-width="2" />
 
       <!-- Horizontal bus line -->
-      <line x1="110" y1="300" x2="710" y2="300" stroke="#1a1f36" stroke-width="2" />
+      <line x1="110" y1="300" x2="710" y2="300" style="stroke: var(--text-primary)" stroke-width="2" />
 
       <!-- Bus drops to operational nodes (navy) -->
-      <line x1="110" y1="300" x2="110" y2="360" stroke="#1a1f36" stroke-width="2" marker-end="url(#arrow-navy)" />
-      <line x1="260" y1="300" x2="260" y2="360" stroke="#1a1f36" stroke-width="2" marker-end="url(#arrow-navy)" />
-      <line x1="410" y1="300" x2="410" y2="360" stroke="#1a1f36" stroke-width="2" marker-end="url(#arrow-navy)" />
-      <line x1="560" y1="300" x2="560" y2="360" stroke="#1a1f36" stroke-width="2" marker-end="url(#arrow-navy)" />
-      <line x1="710" y1="300" x2="710" y2="360" stroke="#1a1f36" stroke-width="2" marker-end="url(#arrow-navy)" />
+      <line x1="110" y1="300" x2="110" y2="360" style="stroke: var(--text-primary)" stroke-width="2" marker-end="url(#arrow-navy)" />
+      <line x1="260" y1="300" x2="260" y2="360" style="stroke: var(--text-primary)" stroke-width="2" marker-end="url(#arrow-navy)" />
+      <line x1="410" y1="300" x2="410" y2="360" style="stroke: var(--text-primary)" stroke-width="2" marker-end="url(#arrow-navy)" />
+      <line x1="560" y1="300" x2="560" y2="360" style="stroke: var(--text-primary)" stroke-width="2" marker-end="url(#arrow-navy)" />
+      <line x1="710" y1="300" x2="710" y2="360" style="stroke: var(--text-primary)" stroke-width="2" marker-end="url(#arrow-navy)" />
 
       <!-- Planned drops to JUPITER / URANUS (dashed navy) -->
-      <line x1="230" y1="300" x2="230" y2="480" stroke="#1a1f36" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow-navy)" />
-      <line x1="490" y1="300" x2="490" y2="480" stroke="#1a1f36" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow-navy)" />
+      <line x1="230" y1="300" x2="230" y2="480" style="stroke: var(--text-primary)" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow-navy)" />
+      <line x1="490" y1="300" x2="490" y2="480" style="stroke: var(--text-primary)" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow-navy)" />
     </g>
 
     <!-- ==================== TRACE DECORATIONS ==================== -->
-    <g id="trace-decorations" stroke="#1a1f36" stroke-width="1.5" opacity="0.6">
+    <g id="trace-decorations" style="stroke: var(--text-primary)" stroke-width="1.5" opacity="0.6">
       <!-- Corner at SUN→bus junction -->
       <line x1="334" y1="300" x2="346" y2="300" />
       <!-- Corner at SUN→NEPTUNE -->
@@ -94,7 +94,7 @@ const { class: className = '' } = Astro.props;
     </g>
 
     <!-- ==================== CONNECTION LABELS ==================== -->
-    <g id="connection-labels" font-family="'Share Tech Mono', monospace" font-size="9" fill="#6b7280" text-anchor="middle">
+    <g id="connection-labels" font-family="'Share Tech Mono', monospace" font-size="9" style="fill: var(--text-secondary)" text-anchor="middle">
       <text x="225" y="202">TASK</text>
       <text x="455" y="202">ROUTE</text>
       <text x="685" y="202">RESULT</text>
@@ -105,82 +105,82 @@ const { class: className = '' } = Astro.props;
     <g id="operational-nodes">
       <!-- VENUS -->
       <g transform="translate(50, 180)">
-        <rect width="120" height="56" rx="6" fill="#ffffff" stroke="#1a5cff" stroke-width="2" />
-        <circle cx="12" cy="10" r="3" fill="#22c55e" />
-        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" fill="#1a1f36">VENUS</text>
-        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" fill="#6b7280">ENTRY</text>
+        <rect width="120" height="56" rx="6" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="2" />
+        <circle cx="12" cy="10" r="3" style="fill: var(--accent-success)" />
+        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" style="fill: var(--text-primary)">VENUS</text>
+        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" style="fill: var(--text-secondary)">ENTRY</text>
       </g>
 
       <!-- SUN -->
       <g transform="translate(280, 180)">
-        <rect width="120" height="56" rx="6" fill="#ffffff" stroke="#1a5cff" stroke-width="2" />
-        <circle cx="12" cy="10" r="3" fill="#22c55e" />
-        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" fill="#1a1f36">SUN</text>
-        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" fill="#6b7280">CORE</text>
+        <rect width="120" height="56" rx="6" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="2" />
+        <circle cx="12" cy="10" r="3" style="fill: var(--accent-success)" />
+        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" style="fill: var(--text-primary)">SUN</text>
+        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" style="fill: var(--text-secondary)">CORE</text>
       </g>
 
       <!-- MARS -->
       <g transform="translate(510, 180)">
-        <rect width="120" height="56" rx="6" fill="#ffffff" stroke="#1a5cff" stroke-width="2" />
-        <circle cx="12" cy="10" r="3" fill="#22c55e" />
-        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" fill="#1a1f36">MARS</text>
-        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" fill="#6b7280">EXECUTION</text>
+        <rect width="120" height="56" rx="6" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="2" />
+        <circle cx="12" cy="10" r="3" style="fill: var(--accent-success)" />
+        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" style="fill: var(--text-primary)">MARS</text>
+        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" style="fill: var(--text-secondary)">EXECUTION</text>
       </g>
 
       <!-- RESULT -->
       <g transform="translate(740, 180)">
-        <rect width="120" height="56" rx="6" fill="#ffffff" stroke="#1a5cff" stroke-width="2" />
-        <circle cx="12" cy="10" r="3" fill="#22c55e" />
-        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" fill="#1a1f36">RESULT</text>
-        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" fill="#6b7280">DELIVERED</text>
+        <rect width="120" height="56" rx="6" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="2" />
+        <circle cx="12" cy="10" r="3" style="fill: var(--accent-success)" />
+        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" style="fill: var(--text-primary)">RESULT</text>
+        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" style="fill: var(--text-secondary)">DELIVERED</text>
       </g>
 
       <!-- NEPTUNE -->
       <g transform="translate(280, 40)">
-        <rect width="120" height="56" rx="6" fill="#ffffff" stroke="#1a5cff" stroke-width="2" />
-        <circle cx="12" cy="10" r="3" fill="#22c55e" />
-        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" fill="#1a1f36">NEPTUNE</text>
-        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" fill="#6b7280">INFERENCE</text>
+        <rect width="120" height="56" rx="6" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="2" />
+        <circle cx="12" cy="10" r="3" style="fill: var(--accent-success)" />
+        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" style="fill: var(--text-primary)">NEPTUNE</text>
+        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" style="fill: var(--text-secondary)">INFERENCE</text>
       </g>
 
       <!-- MOON -->
       <g transform="translate(50, 360)">
-        <rect width="120" height="56" rx="6" fill="#ffffff" stroke="#1a5cff" stroke-width="2" />
-        <circle cx="12" cy="10" r="3" fill="#22c55e" />
-        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" fill="#1a1f36">MOON</text>
-        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" fill="#6b7280">MEMORY</text>
+        <rect width="120" height="56" rx="6" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="2" />
+        <circle cx="12" cy="10" r="3" style="fill: var(--accent-success)" />
+        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" style="fill: var(--text-primary)">MOON</text>
+        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" style="fill: var(--text-secondary)">MEMORY</text>
       </g>
 
       <!-- MERCURY -->
       <g transform="translate(200, 360)">
-        <rect width="120" height="56" rx="6" fill="#ffffff" stroke="#1a5cff" stroke-width="2" />
-        <circle cx="12" cy="10" r="3" fill="#22c55e" />
-        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" fill="#1a1f36">MERCURY</text>
-        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" fill="#6b7280">MESSAGING</text>
+        <rect width="120" height="56" rx="6" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="2" />
+        <circle cx="12" cy="10" r="3" style="fill: var(--accent-success)" />
+        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" style="fill: var(--text-primary)">MERCURY</text>
+        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" style="fill: var(--text-secondary)">MESSAGING</text>
       </g>
 
       <!-- SATURN -->
       <g transform="translate(350, 360)">
-        <rect width="120" height="56" rx="6" fill="#ffffff" stroke="#1a5cff" stroke-width="2" />
-        <circle cx="12" cy="10" r="3" fill="#22c55e" />
-        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" fill="#1a1f36">SATURN</text>
-        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" fill="#6b7280">GOVERNANCE</text>
+        <rect width="120" height="56" rx="6" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="2" />
+        <circle cx="12" cy="10" r="3" style="fill: var(--accent-success)" />
+        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" style="fill: var(--text-primary)">SATURN</text>
+        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" style="fill: var(--text-secondary)">GOVERNANCE</text>
       </g>
 
       <!-- PLUTO -->
       <g transform="translate(500, 360)">
-        <rect width="120" height="56" rx="6" fill="#ffffff" stroke="#1a5cff" stroke-width="2" />
-        <circle cx="12" cy="10" r="3" fill="#22c55e" />
-        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" fill="#1a1f36">PLUTO</text>
-        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" fill="#6b7280">SECURITY</text>
+        <rect width="120" height="56" rx="6" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="2" />
+        <circle cx="12" cy="10" r="3" style="fill: var(--accent-success)" />
+        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" style="fill: var(--text-primary)">PLUTO</text>
+        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" style="fill: var(--text-secondary)">SECURITY</text>
       </g>
 
       <!-- THEMIS -->
       <g transform="translate(650, 360)">
-        <rect width="120" height="56" rx="6" fill="#ffffff" stroke="#1a5cff" stroke-width="2" />
-        <circle cx="12" cy="10" r="3" fill="#22c55e" />
-        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" fill="#1a1f36">THEMIS</text>
-        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" fill="#6b7280">JUDGMENT</text>
+        <rect width="120" height="56" rx="6" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="2" />
+        <circle cx="12" cy="10" r="3" style="fill: var(--accent-success)" />
+        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" style="fill: var(--text-primary)">THEMIS</text>
+        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" style="fill: var(--text-secondary)">JUDGMENT</text>
       </g>
     </g>
 
@@ -188,37 +188,37 @@ const { class: className = '' } = Astro.props;
     <g id="planned-nodes">
       <!-- JUPITER -->
       <g transform="translate(170, 480)">
-        <rect width="120" height="56" rx="6" fill="#ffffff" stroke="#1a5cff" stroke-width="2" stroke-dasharray="5 3" />
-        <circle cx="12" cy="10" r="3" fill="#d4a017" />
-        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" fill="#1a1f36">JUPITER</text>
-        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" fill="#6b7280">SCALING</text>
+        <rect width="120" height="56" rx="6" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="2" stroke-dasharray="5 3" />
+        <circle cx="12" cy="10" r="3" style="fill: var(--accent-tertiary)" />
+        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" style="fill: var(--text-primary)">JUPITER</text>
+        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" style="fill: var(--text-secondary)">SCALING</text>
       </g>
 
       <!-- URANUS -->
       <g transform="translate(430, 480)">
-        <rect width="120" height="56" rx="6" fill="#ffffff" stroke="#1a5cff" stroke-width="2" stroke-dasharray="5 3" />
-        <circle cx="12" cy="10" r="3" fill="#d4a017" />
-        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" fill="#1a1f36">URANUS</text>
-        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" fill="#6b7280">EXPERIMENTATION</text>
+        <rect width="120" height="56" rx="6" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="2" stroke-dasharray="5 3" />
+        <circle cx="12" cy="10" r="3" style="fill: var(--accent-tertiary)" />
+        <text x="60" y="26" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-weight="bold" font-size="13" style="fill: var(--text-primary)">URANUS</text>
+        <text x="60" y="42" text-anchor="middle" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="10" style="fill: var(--text-secondary)">EXPERIMENTATION</text>
       </g>
     </g>
 
     <!-- ==================== LEGEND ==================== -->
     <g id="legend" transform="translate(790, 490)">
       <!-- Legend box -->
-      <rect width="180" height="85" rx="4" fill="#ffffff" stroke="#1a5cff" stroke-width="1.5" />
+      <rect width="180" height="85" rx="4" style="fill: var(--bg-secondary); stroke: var(--accent-primary)" stroke-width="1.5" />
 
       <!-- Active path -->
-      <line x1="14" y1="24" x2="40" y2="24" stroke="#e85d3a" stroke-width="2" />
-      <text x="48" y="27" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="9" fill="#1a1f36">ACTIVE PATH</text>
+      <line x1="14" y1="24" x2="40" y2="24" style="stroke: var(--accent-warm)" stroke-width="2" />
+      <text x="48" y="27" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="9" style="fill: var(--text-primary)">ACTIVE PATH</text>
 
       <!-- Planned -->
-      <line x1="14" y1="45" x2="40" y2="45" stroke="#1a1f36" stroke-width="2" stroke-dasharray="4 2" />
-      <text x="48" y="48" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="9" fill="#1a1f36">PLANNED</text>
+      <line x1="14" y1="45" x2="40" y2="45" style="stroke: var(--text-primary)" stroke-width="2" stroke-dasharray="4 2" />
+      <text x="48" y="48" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="9" style="fill: var(--text-primary)">PLANNED</text>
 
       <!-- Operational -->
-      <circle cx="27" cy="68" r="3" fill="#22c55e" />
-      <text x="48" y="71" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="9" fill="#1a1f36">OPERATIONAL</text>
+      <circle cx="27" cy="68" r="3" style="fill: var(--accent-success)" />
+      <text x="48" y="71" dominant-baseline="middle" font-family="'Share Tech Mono', monospace" font-size="9" style="fill: var(--text-primary)">OPERATIONAL</text>
     </g>
 
     <!-- ==================== HEADER LABEL ==================== -->
@@ -227,7 +227,7 @@ const { class: className = '' } = Astro.props;
       y="28"
       font-family="'Share Tech Mono', monospace"
       font-size="9"
-      fill="#9ca3af"
+      style="fill: var(--text-secondary)"
       letter-spacing="1.5"
     >
       SOLAR SYSTEMS AI — ARCHITECTURE v1.0

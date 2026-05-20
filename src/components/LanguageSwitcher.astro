@@ -15,20 +15,20 @@ const switchPath = basePath.replace(`/${lang}/`, `/${otherLang}/`);
     class:list={[
       'px-1.5 py-0.5 transition-colors duration-150',
       lang === 'en'
-        ? 'text-blue-terminal font-bold'
-        : 'text-gray-500 hover:text-white',
+        ? 'text-theme-accent font-bold'
+        : 'text-theme-muted hover:text-theme-nav-text',
     ]}
   >
     EN
   </a>
-  <span class="text-gray-600">|</span>
+  <span class="text-theme-border">|</span>
   <a
     href={lang === 'pt' ? basePath : switchPath}
     class:list={[
       'px-1.5 py-0.5 transition-colors duration-150',
       lang === 'pt'
-        ? 'text-blue-terminal font-bold'
-        : 'text-gray-500 hover:text-white',
+        ? 'text-theme-accent font-bold'
+        : 'text-theme-muted hover:text-theme-nav-text',
     ]}
   >
     PT
