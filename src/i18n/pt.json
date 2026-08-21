@@ -156,5 +156,18 @@
     ],
     "evidence_note": "EVIDÊNCIA: cada marco está registrado no ledger de enforcement da plataforma, com seu flag, postura de falha e registro de decisão."
   },
-  "about": { "headline": "SOBRE", "positioning": "Solar Systems AI é construído sobre a convicção de que a infraestrutura inteligente deve servir a objetivos humanos — não demandar atenção humana. Construímos sistemas que desaparecem da percepção, libertando pessoas para o que mais importa.", "approach": "Toda decisão arquitetural reflete nossa crença de que a automação deve ser delimitada, responsabilizável e a serviço da presença humana. Isto não é 'IA em todo lugar' — é IA precisamente onde ela deve estar.", "team": "DADOS_DA_EQUIPE: CLASSIFICADO" }
+  "about": {
+    "headline": "SOBRE",
+    "positioning": "Solar Systems AI é construído sobre a convicção de que a infraestrutura inteligente deve servir a objetivos humanos — não demandar atenção humana. A forma comercial dessa convicção é a governança: um agente só devolve horas se a organização puder deixá-lo rodar, e ele só roda onde identidade, autorização e auditoria respondem por ele.",
+    "approach": "Toda decisão arquitetural reflete nossa crença de que a automação deve ser delimitada, responsabilizável e a serviço da presença humana. Isto não é 'IA em todo lugar' — é IA precisamente onde ela deve estar, sob um plano de controle que diz quem agiu, em nome de quem, e sobre quais dados.",
+    "diff_title": "DIFERENCIAÇÃO",
+    "diff_intro": "Por que isto não é mais um framework de agentes.",
+    "diff_columns": [
+      { "name": "FRAMEWORKS_DE_AGENTES", "focus": "FOCO: CAPACIDADE", "text": "Ótimos para construir o agente — raciocínio, ferramentas, memória. A governança fica a cargo de quem integra: multi-tenancy, autorização fina, auditoria e medição não vêm na caixa." },
+      { "name": "PLATAFORMAS_DE_MODELO", "focus": "FOCO: O MODELO", "text": "Qualidade e custo de inferência, gerenciados. Não resolvem identidade nem autorização de acesso, e prendem o comprador à nuvem, ao modelo e ao agente de um único fornecedor." },
+      { "name": "SOLAR_SYSTEMS", "focus": "FOCO: GOVERNANÇA", "text": "Identidade, autorização e auditoria por construção — sob qualquer agente e qualquer modelo, implantável em ambiente privado. A camada que os outros dois presumem que alguém vai construir." }
+    ],
+    "diff_close": "POSIÇÃO_DEFENSÁVEL — quem quer capacidade compra framework; quem precisa colocar agentes em operação regulada precisa da camada que fica por baixo de todos eles.",
+    "team": "DADOS_DA_EQUIPE: CLASSIFICADO"
+  }
 }

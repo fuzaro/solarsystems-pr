@@ -156,5 +156,18 @@
     ],
     "evidence_note": "EVIDENCE: each milestone is recorded in the platform's enforcement ledger with its flag, failure posture and decision record."
   },
-  "about": { "headline": "ABOUT", "positioning": "Solar Systems AI is built on the conviction that intelligent infrastructure should serve human ends — not demand human attention. We build systems that disappear from notice, freeing people for what matters most.", "approach": "Every architectural decision reflects our belief that automation must be bounded, accountable, and in service of human presence. This is not 'AI everywhere' — this is AI precisely where it belongs.", "team": "TEAM_DATA: CLASSIFIED" }
+  "about": {
+    "headline": "ABOUT",
+    "positioning": "Solar Systems AI is built on the conviction that intelligent infrastructure should serve human ends — not demand human attention. The commercial form of that conviction is governance: an agent only gives hours back if the organisation can let it run, and it can only run where identity, authorization and audit answer for it.",
+    "approach": "Every architectural decision reflects our belief that automation must be bounded, accountable, and in service of human presence. This is not 'AI everywhere' — this is AI precisely where it belongs, under a control plane that says who acted, on whose behalf, and over which data.",
+    "diff_title": "DIFFERENTIATION",
+    "diff_intro": "Why this is not one more agent framework.",
+    "diff_columns": [
+      { "name": "AGENT_FRAMEWORKS", "focus": "FOCUS: CAPABILITY", "text": "Excellent for building the agent — reasoning, tools, memory. Governance is left to whoever integrates it: multi-tenancy, fine-grained authorization, audit and metering are not in the box." },
+      { "name": "MODEL_PLATFORMS", "focus": "FOCUS: THE MODEL", "text": "Quality and cost of inference, managed. They do not resolve identity or access authorization, and they tie the buyer to one vendor's cloud, model and agent." },
+      { "name": "SOLAR_SYSTEMS", "focus": "FOCUS: GOVERNANCE", "text": "Identity, authorization and audit by construction — under any agent and any model, deployable in a private environment. The layer the other two assume someone else will build." }
+    ],
+    "diff_close": "DEFENSIBLE_POSITION — whoever wants capability buys a framework; whoever needs to put agents into regulated operation needs the layer that sits underneath all of them.",
+    "team": "TEAM_DATA: CLASSIFIED"
+  }
 }

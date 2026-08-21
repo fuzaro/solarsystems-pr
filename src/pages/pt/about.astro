@@ -25,6 +25,24 @@ import pt from '../../i18n/pt.json';
       </p>
     </div>
 
+    <!-- Differentiation -->
+    <div class="mb-10">
+      <h2 class="font-display text-xs tracking-[0.2em] text-theme-text font-bold mb-3">◆ {pt.about.diff_title}</h2>
+      <p class="font-sans text-sm text-theme-muted max-w-2xl mb-5">{pt.about.diff_intro}</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        {pt.about.diff_columns.map((col, i) => (
+          <div class:list={['bg-theme-surface rounded shadow-sm px-5 py-5 border-t-4', i === 2 ? 'border-theme-accent' : 'border-theme-border']}>
+            <div class="font-mono text-xs text-theme-accent font-bold tracking-wider mb-1">{col.name}</div>
+            <div class="font-mono text-[10px] text-theme-muted tracking-wider mb-3">{col.focus}</div>
+            <p class="font-sans text-xs text-theme-muted leading-relaxed">{col.text}</p>
+          </div>
+        ))}
+      </div>
+      <div class="bg-theme-terminal rounded px-5 py-4">
+        <p class="font-mono text-xs text-theme-muted leading-relaxed">{pt.about.diff_close}</p>
+      </div>
+    </div>
+
     <!-- Team -->
     <div class="bg-theme-terminal rounded-lg px-6 py-8 text-center">
       <div class="font-mono text-xs tracking-[0.2em] text-theme-muted mb-3">◆ REGISTRO_DE_PESSOAL</div>
