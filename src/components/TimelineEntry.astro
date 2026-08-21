@@ -2,7 +2,7 @@
 /* TimelineEntry — A terminal log line style timeline entry */
 interface Props {
   timestamp: string;
-  level: 'INFO' | 'WARN' | 'LIVE' | 'AUDIT';
+  level: string;
   message: string;
 }
 const { timestamp, level, message } = Astro.props;
@@ -12,11 +12,15 @@ const levelColors: Record<string, string> = {
   WARN: 'text-theme-accent-3',
   LIVE: 'text-theme-accent',
   AUDIT: 'text-theme-accent-2',
+  VERIFIED: 'text-theme-success',
+  PROVADO: 'text-theme-success',
 };
 ---
+{/* fundo é bg-theme-terminal (escuro em todo tema) → texto usa nav-text, não theme-text:
+    --text-primary é IDÊNTICO a --bg-terminal no tema light (#2B2D33) e no hi-con (#000000) */}
 <div class="font-mono text-xs flex items-start gap-2 py-1">
-  <span class="text-theme-muted shrink-0">{timestamp}</span>
-  <span class:list={[levelColors[level], 'shrink-0 font-bold']}>[{level}]</span>
-  <span class="text-theme-text">{message}</span>
+  <span class="text-theme-nav-text shrink-0" style="opacity:0.6">{timestamp}</span>
+  <span class:list={[levelColors[level] || 'text-theme-nav-text', 'shrink-0 font-bold']} style="opacity:0.7">[{level}]</span>
+  <span class="text-theme-nav-text" style="opacity:0.92">{message}</span>
   <slot />
 </div>

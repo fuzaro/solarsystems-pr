@@ -21,7 +21,7 @@ const variantClasses: Record<string, string> = {
   <!-- Colored header bar -->
   <div class:list={[variantClasses[variant], 'px-4 py-2 flex items-center justify-between']}>
     <span class="text-theme-nav-text text-xs tracking-[0.2em] font-bold">{title}</span>
-    <span class="text-theme-nav-text/70 text-sm">{icon}</span>
+    <span class="text-theme-nav-text text-sm" style="opacity:0.7">{icon}</span>
   </div>
   <!-- Body -->
   <div class:list={['px-4 text-center', name || status ? 'py-5' : 'pt-5 pb-2']}>

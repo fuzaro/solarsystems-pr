@@ -24,14 +24,14 @@ const levelColors: Record<string, string> = {
   INFO: 'text-theme-success',
   EXEC: 'text-theme-accent',
   AUDIT: 'text-theme-accent-2',
-  IDLE: 'text-theme-muted',
+  IDLE: 'text-theme-nav-text',
 };
 ---
 <div class="terminal-feed bg-theme-terminal rounded-lg overflow-hidden font-mono shadow-md" data-lines={JSON.stringify(lines)}>
   <!-- Title bar -->
   <div class="flex items-center gap-3 px-4 py-2 bg-theme-terminal border-b border-theme-border">
     <span class="w-2.5 h-2.5 rounded-full bg-red-500 shrink-0"></span>
-    <span class="text-[10px] text-theme-muted tracking-[0.2em] font-bold">{title}</span>
+    <span class="text-[10px] text-theme-nav-text tracking-[0.2em] font-bold" style="opacity:0.7">{title}</span>
     <div class="ml-auto text-theme-border hover:text-theme-muted cursor-pointer transition-colors">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
@@ -43,9 +43,9 @@ const levelColors: Record<string, string> = {
     <noscript>
       {lines.map((line) => (
         <div class="text-xs leading-relaxed">
-          <span class="text-theme-muted">{line.time} </span>
-          <span class:list={[levelColors[line.level] || 'text-theme-muted', 'font-bold']}>{'[' + line.level + ']'}</span>
-          <span class="text-theme-text">{' ' + line.message}</span>
+          <span class="text-theme-nav-text" style="opacity:0.6">{line.time} </span>
+          <span class:list={[levelColors[line.level] || 'text-theme-nav-text', 'font-bold']}>{'[' + line.level + ']'}</span>
+          <span class="text-theme-nav-text" style="opacity:0.92">{' ' + line.message}</span>
         </div>
       ))}
       <div class="text-xs text-theme-success blink-cursor"></div>
@@ -60,7 +60,7 @@ const levelColors: Record<string, string> = {
       INFO: 'text-theme-success',
       EXEC: 'text-theme-accent',
       AUDIT: 'text-theme-accent-2',
-      IDLE: 'text-theme-muted',
+      IDLE: 'text-theme-nav-text',
     };
 
     const LINE_DELAY = 400;
@@ -121,13 +121,15 @@ const levelColors: Record<string, string> = {
         wrapper.className = 'text-xs leading-relaxed';
 
         const timeSpan = document.createElement('span');
-        timeSpan.className = 'text-theme-muted';
+        timeSpan.className = 'text-theme-nav-text';
+        timeSpan.style.opacity = '0.6';
 
         const levelSpan = document.createElement('span');
-        levelSpan.className = (LEVEL_COLORS[line.level] || 'text-theme-muted') + ' font-bold';
+        levelSpan.className = (LEVEL_COLORS[line.level] || 'text-theme-nav-text') + ' font-bold';
 
         const messageSpan = document.createElement('span');
-        messageSpan.className = 'text-theme-text';
+        messageSpan.className = 'text-theme-nav-text';
+        messageSpan.style.opacity = '0.92';
 
         wrapper.appendChild(timeSpan);
         wrapper.appendChild(levelSpan);
