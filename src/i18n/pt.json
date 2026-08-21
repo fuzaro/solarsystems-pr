@@ -61,6 +61,23 @@
       { "number": "06", "name": "DELIVERY", "description": "Os resultados são retornados a você" },
       { "number": "07", "name": "AUDIT", "description": "Um registro de conformidade à prova de adulteração é gravado" }
     ],
+    "flow_title": "O_CAMINHO_GOVERNADO",
+    "flow_intro": "A Solar Systems fica entre o chamador e os modelos. Uma tarefa atravessa identidade, política e auditoria antes de tocar qualquer dado.",
+    "flow_steps": [
+      { "name": "VENUS", "role": "GATEWAY_E_IDENTIDADE", "text": "A única porta de entrada — inclusive para chamadores internos. Deriva quem está chamando a partir do token; nunca confia no corpo da requisição." },
+      { "name": "SUN", "role": "ORQUESTRAÇÃO_E_ADEQUAÇÃO", "text": "Perfila a tarefa e a passa por um gate de segurança — classificador mais política — antes de provisionar qualquer execução." },
+      { "name": "MARS + GDWG", "role": "EXECUÇÃO_GOVERNADA", "text": "Lança agentes em nome do principal real, em contêineres isolados. O GDWG conduz loops autônomos sobre um grafo governado." },
+      { "name": "NEPTUNE", "role": "ROTEAMENTO_DE_MODELOS", "text": "Um único jeito de rodar inferência em toda a plataforma — roteada entre provedores externos e modelos locais, por mérito medido." }
+    ],
+    "spine_title": "A_ESPINHA_DE_GOVERNANÇA",
+    "spine_intro": "Cinco serviços atravessam cada chamada — é sobre isto que o auditor pergunta.",
+    "spine_items": [
+      { "name": "PLUTO", "text": "Segurança e autorização: checagem de acesso (FGA), mint de session-token, resolução de segredos." },
+      { "name": "SATURN", "text": "Identidade e tenancy: principais, tenants, papéis, planos de capacidade, quota, orçamento e medição." },
+      { "name": "MOON", "text": "Cadeia de auditoria à prova de adulteração e memória — o registro sobrevive à perda do barramento." },
+      { "name": "MERCURY", "text": "Backbone de eventos (NATS JetStream): observabilidade, nunca autoridade." },
+      { "name": "THEMIS", "text": "Plano de julgamento — observa e pontua em shadow; nenhum gate de enforcement está ligado." }
+    ],
     "architecture_title": "ARQUITETURA_DO_SISTEMA",
     "planets": [
       { "title": "CORE_ORCHESTRATOR", "name": "SUN", "description": "Roteia tarefas, gerencia o ciclo de vida", "icon": "☀", "variant": "orange", "status": "OTIMIZADO" },
@@ -75,7 +92,7 @@
       { "title": "SECURITY_AUTHORITY", "name": "PLUTO", "description": "Segurança e autorização — checagem de acesso (FGA), mint de session-token, resolução de segredos", "icon": "♇", "variant": "orange", "status": "ATIVO" },
       { "title": "JUDGMENT_PLANE", "name": "THEMIS", "description": "Plano de julgamento — observa e pontua qualidade e reputação em shadow", "icon": "⚖", "variant": "gold", "status": "ATIVO" }
     ],
-    "execution_note": "EXECUÇÃO_AUTÔNOMA — o GDWG conduz loops de agentes sobre um grafo governado. Agnóstico de harness: o mesmo contrato de governança vale para Claude Code, Codex e Cursor, dirigidos via MCP."
+    "execution_note": "EXECUÇÃO_AUTÔNOMA — o GDWG conduz loops de agentes sobre um grafo governado, sob a mesma identidade, autorização, quota e auditoria dos demais planetas. Agnóstico de harness: três harnesses — Claude Code, Codex e Cursor — dirigiram o engine pelo fio MCP real, cada uma com seu próprio modelo, em tenant isolado, e o grafo fechou o contrato de forma idêntica (3/3, 2026-06-11). Este é o eixo HARNESS: o contrato fecha igual sob autoria externa. Não é afirmação sobre a execução ou a eficácia do código produzido."
   },
   "principles": {
     "headline": "GOVERNANÇA_POR_CONSTRUÇÃO",

@@ -61,6 +61,23 @@
       { "number": "06", "name": "DELIVERY", "description": "Results are returned to you" },
       { "number": "07", "name": "AUDIT", "description": "A tamper-evident compliance record is written" }
     ],
+    "flow_title": "THE_GOVERNED_PATH",
+    "flow_intro": "Solar Systems sits between the caller and the models. A task crosses identity, policy and audit before it touches any data.",
+    "flow_steps": [
+      { "name": "VENUS", "role": "GATEWAY_AND_IDENTITY", "text": "The single door in — including internal callers. Derives who is calling from the token; never trusts the request body." },
+      { "name": "SUN", "role": "ORCHESTRATION_AND_ADEQUATION", "text": "Profiles the task and puts it through a security gate — classifier plus policy — before any execution is provisioned." },
+      { "name": "MARS + GDWG", "role": "GOVERNED_EXECUTION", "text": "Launches agents on-behalf of the real principal, in isolated containers. GDWG drives autonomous loops over a governed graph." },
+      { "name": "NEPTUNE", "role": "MODEL_ROUTING", "text": "One way to run inference for the whole platform — routed across external providers and local models, by measured merit." }
+    ],
+    "spine_title": "THE_GOVERNANCE_SPINE",
+    "spine_intro": "Five services cut across every call — this is what the auditor asks about.",
+    "spine_items": [
+      { "name": "PLUTO", "text": "Security & authorization: access checks (FGA), session-token minting, secret resolution." },
+      { "name": "SATURN", "text": "Identity & tenancy: principals, tenants, roles, capability plans, quota, budget and metering." },
+      { "name": "MOON", "text": "Tamper-evident audit chain and memory — the record survives the loss of the bus." },
+      { "name": "MERCURY", "text": "Event backbone (NATS JetStream): observability, never authority." },
+      { "name": "THEMIS", "text": "Judgment plane — observes and scores in shadow; no enforcement gate is switched on." }
+    ],
     "architecture_title": "SYSTEM_ARCHITECTURE",
     "planets": [
       { "title": "CORE_ORCHESTRATOR", "name": "SUN", "description": "Routes tasks, manages lifecycle", "icon": "☀", "variant": "orange", "status": "OPTIMIZED" },
@@ -75,7 +92,7 @@
       { "title": "SECURITY_AUTHORITY", "name": "PLUTO", "description": "Security & authorization — access checks (FGA), session-token minting, secret resolution", "icon": "♇", "variant": "orange", "status": "ACTIVE" },
       { "title": "JUDGMENT_PLANE", "name": "THEMIS", "description": "Judgment plane — observes and scores quality and reputation in shadow", "icon": "⚖", "variant": "gold", "status": "ACTIVE" }
     ],
-    "execution_note": "AUTONOMOUS_EXECUTION — GDWG drives agent loops over a governed graph. Harness-agnostic: the same governance contract holds for Claude Code, Codex and Cursor, driven via MCP."
+    "execution_note": "AUTONOMOUS_EXECUTION — GDWG drives agent loops over a governed graph, under the same identity, authorization, quota and audit as every other planet. Harness-agnostic: three harnesses — Claude Code, Codex and Cursor — each drove the engine over the real MCP wire, each with its own model, in an isolated tenant, and the graph closed the contract identically (3/3, 2026-06-11). This is the HARNESS axis: the contract closes the same under external authorship. It is not a claim about the execution or efficacy of the code produced."
   },
   "principles": {
     "headline": "GOVERNANCE_BY_CONSTRUCTION",
