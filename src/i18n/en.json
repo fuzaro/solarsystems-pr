@@ -33,11 +33,20 @@
     "problem_text": "Modern knowledge workers lose hours daily to tasks that don't require human judgment. Manual data processing, queue triage, workflow navigation — time stolen from creativity, relationships, and presence.",
     "insight_title": "THE_INSIGHT",
     "insight_text": "People aren't depleted because they lack tools. They're depleted because their tools demand constant attention. The best infrastructure is the kind you stop noticing.",
+    "enterprise_title": "THE_ENTERPRISE_GAP",
+    "enterprise_text": "Agents reached production. Governance did not. Building the prototype is the easy part; what separates it from corporate operation is a wall of requirements nobody demos.",
+    "enterprise_gaps": [
+      { "title": "IDENTITY_THAT_GETS_LOST", "text": "The agent acts 'on behalf of' someone — but who authorized what dissolves between hops. Responsibility cannot be proven after the fact." },
+      { "title": "PERMISSION_BY_CONVENTION", "text": "Access to data and tools is governed by prompt and good will, not by policy a machine can evaluate and deny." },
+      { "title": "AUDIT_THAT_DOES_NOT_HOLD", "text": "Editable logs answer neither auditor nor regulator: what did this agent do, under what authority, over which data?" }
+    ],
+    "valley_title": "THE_VALLEY_OF_DEATH",
+    "valley_text": "This is where pilots die — not for lack of intelligence, but for lack of control. They impress in the demo and then meet security, compliance and risk. What is missing is the layer that turns 'a demo that works' into 'a system the audit approves'.",
     "answer_title": "OUR_ANSWER",
-    "answer_text": "Solar Systems AI removes the non-human work entirely — with accountability, auditability, and bounds. Infrastructure that disappears, giving back time for what only humans can do.",
-    "stat_subsystems": "9 operational subsystems",
+    "answer_text": "Solar Systems AI removes the non-human work — with accountability, auditability, and bounds. The same architecture that gives people their hours back is the one that makes an agent defensible in a regulated environment: infrastructure that disappears, and answers when asked.",
+    "stat_subsystems": "components, one responsibility each",
     "stat_lifecycle": "7-step compliance lifecycle",
-    "stat_principles": "6 non-negotiable principles",
+    "stat_principles": "guarantees by construction",
     "stat_audits": "Audit chain with write-time lock (2026-08-05)"
   },
   "how": {

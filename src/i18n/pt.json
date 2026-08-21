@@ -33,11 +33,20 @@
     "problem_text": "Profissionais do conhecimento perdem horas diárias em tarefas que não exigem julgamento humano. Processamento manual de dados, triagem de filas, navegação de fluxos — tempo roubado da criatividade, dos relacionamentos e da presença.",
     "insight_title": "A_INTUIÇÃO",
     "insight_text": "As pessoas não estão esgotadas porque carecem de ferramentas. Estão esgotadas porque suas ferramentas exigem atenção constante. A melhor infraestrutura é aquela que você deixa de notar.",
+    "enterprise_title": "O_FOSSO_CORPORATIVO",
+    "enterprise_text": "Os agentes chegaram à produção. A governança não. Construir o protótipo é a parte fácil; o que o separa da operação corporativa é um muro de requisitos que ninguém demonstra.",
+    "enterprise_gaps": [
+      { "title": "IDENTIDADE_QUE_SE_PERDE", "text": "O agente age 'em nome de' alguém — mas quem autorizou o quê se dissolve entre os saltos. A responsabilidade não pode ser provada depois." },
+      { "title": "PERMISSÃO_POR_CONVENÇÃO", "text": "O acesso a dados e ferramentas é governado por prompt e boa vontade, não por política que uma máquina possa avaliar e negar." },
+      { "title": "AUDITORIA_QUE_NÃO_SUSTENTA", "text": "Logs editáveis não respondem a auditor nem a regulador: o que este agente fez, sob que autoridade, sobre quais dados?" }
+    ],
+    "valley_title": "O_VALE_DA_MORTE",
+    "valley_text": "É aqui que os pilotos morrem — não por falta de inteligência, mas por falta de controle. Impressionam na demonstração e então encontram segurança, compliance e risco. Falta a camada que transforma 'uma demo que funciona' em 'um sistema que a auditoria aprova'.",
     "answer_title": "NOSSA_RESPOSTA",
-    "answer_text": "Solar Systems AI elimina inteiramente o trabalho não-humano — com responsabilização, rastreabilidade e limites. Infraestrutura que desaparece, devolvendo tempo para o que só humanos podem fazer.",
-    "stat_subsystems": "9 subsistemas operacionais",
+    "answer_text": "Solar Systems AI elimina o trabalho não-humano — com responsabilização, rastreabilidade e limites. A mesma arquitetura que devolve as horas às pessoas é a que torna um agente defensável em ambiente regulado: infraestrutura que desaparece, e que responde quando perguntada.",
+    "stat_subsystems": "componentes, uma responsabilidade cada",
     "stat_lifecycle": "7 etapas do ciclo de conformidade",
-    "stat_principles": "6 princípios inegociáveis",
+    "stat_principles": "garantias por construção",
     "stat_audits": "Cadeia de auditoria com trava de escrita (2026-08-05)"
   },
   "how": {
