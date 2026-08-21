@@ -8,12 +8,24 @@
     "about": "SOBRE"
   },
   "home": {
-    "badge": "PROTOCOLO OPERACIONAL ATIVO",
+    "badge": "GOVERNANÇA POR CONSTRUÇÃO",
     "title": "SOLAR SYSTEMS AI",
     "subtitle": "PLATAFORMA",
-    "description": "O plano de controle governado para agentes de IA em produção. Cada tarefa passa por identidade provada, autorização fail-closed e auditoria à prova de adulteração — orquestrando agentes com precisão, numa arquitetura robusta de cartões perfurados virtuais.",
+    "description": "Infraestrutura que desaparece — para devolver às pessoas as suas horas. O plano de controle governado para levar agentes de IA à produção: cada tarefa carrega identidade provada, política de autorização executável e trilha de auditoria à prova de adulteração, numa arquitetura de cartões perfurados virtuais.",
     "cta_primary": "INICIALIZAR_CORE",
-    "cta_secondary": "PROTOCOLOS"
+    "cta_secondary": "PROTOCOLOS",
+    "feed_title": "CICLO_DE_TAREFA_GOVERNADA",
+    "feed_lines": [
+      { "time": "12:04:01", "level": "RECV", "message": "TASK_RECEIVED — a submissão entra pelo Venus, a única porta de entrada" },
+      { "time": "12:04:01", "level": "INFO", "message": "IDENTITY_DERIVED — a identidade do chamador vem do token, nunca do corpo" },
+      { "time": "12:04:02", "level": "INFO", "message": "POLICY_CHECK — autorização de mundo fechado (OpenFGA): sem grant explícito, sem acesso" },
+      { "time": "12:04:03", "level": "EXEC", "message": "AGENT_LAUNCHED — roda em nome do principal real, escopado e medido" },
+      { "time": "12:04:05", "level": "EXEC", "message": "HARNESS — claude-code | codex | cursor · dirigidos via MCP" },
+      { "time": "12:04:08", "level": "INFO", "message": "EVALUATION — o plano de julgamento observa em shadow" },
+      { "time": "12:04:10", "level": "INFO", "message": "RESULT_DELIVERED — a saída retorna ao chamador" },
+      { "time": "12:04:11", "level": "AUDIT", "message": "AUDIT_WRITTEN — registro à prova de adulteração, encadeado por hash sob trava de escrita" },
+      { "time": "12:04:12", "level": "IDLE", "message": "AGUARDANDO_PRÓXIMA_INSTRUÇÃO_" }
+    ]
   },
   "why": {
     "headline": "POR_QUE_CONSTRUÍMOS",

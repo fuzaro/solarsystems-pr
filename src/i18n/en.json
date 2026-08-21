@@ -8,12 +8,24 @@
     "about": "ABOUT"
   },
   "home": {
-    "badge": "OPERATIONAL PROTOCOL ACTIVE",
+    "badge": "GOVERNANCE BY CONSTRUCTION",
     "title": "SOLAR SYSTEMS AI",
     "subtitle": "PLATFORM",
-    "description": "The governed control plane for AI agents in production. Every task passes through proven identity, fail-closed authorization and tamper-evident audit — orchestrating agents with precision inside a robust architecture of virtual punch cards.",
+    "description": "Infrastructure that disappears — so people get their hours back. The governed control plane for taking AI agents into production: every task carries proven identity, executable authorization policy and a tamper-evident audit trail, inside an architecture of virtual punch cards.",
     "cta_primary": "INITIALIZE_CORE",
-    "cta_secondary": "PROTOCOLS"
+    "cta_secondary": "PROTOCOLS",
+    "feed_title": "GOVERNED_TASK_CYCLE",
+    "feed_lines": [
+      { "time": "12:04:01", "level": "RECV", "message": "TASK_RECEIVED — submission enters through Venus, the single door in" },
+      { "time": "12:04:01", "level": "INFO", "message": "IDENTITY_DERIVED — caller identity comes from the token, never from the body" },
+      { "time": "12:04:02", "level": "INFO", "message": "POLICY_CHECK — closed-world authorization (OpenFGA): no explicit grant, no access" },
+      { "time": "12:04:03", "level": "EXEC", "message": "AGENT_LAUNCHED — runs on-behalf of the real principal, scoped and metered" },
+      { "time": "12:04:05", "level": "EXEC", "message": "HARNESS — claude-code | codex | cursor · driven via MCP" },
+      { "time": "12:04:08", "level": "INFO", "message": "EVALUATION — the judgment plane observes in shadow" },
+      { "time": "12:04:10", "level": "INFO", "message": "RESULT_DELIVERED — output returned to the caller" },
+      { "time": "12:04:11", "level": "AUDIT", "message": "AUDIT_WRITTEN — tamper-evident record, hash-chained under a write-time lock" },
+      { "time": "12:04:12", "level": "IDLE", "message": "AWAITING_NEXT_INSTRUCTION_" }
+    ]
   },
   "why": {
     "headline": "WHY_WE_BUILD",

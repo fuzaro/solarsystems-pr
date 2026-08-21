@@ -41,31 +41,31 @@ const hrefPrinciples = `${base}/pt/principles`;
     <!-- Planet Cards Row -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
       <PlanetCard
-        title="CORE_ORCHESTRATOR"
-        name="SUN"
-        status="OTIMIZADO"
-        icon="☀"
+        title="ENTRY_POINT"
+        name="VENUS"
+        status="ATIVO"
+        icon="♀"
+        variant="gold"
+      />
+      <PlanetCard
+        title="SECURITY_AUTHORITY"
+        name="PLUTO"
+        status="ATIVO"
+        icon="♇"
         variant="orange"
       />
       <PlanetCard
-        title="INFERENCE_GATEWAY"
-        name="NEPTUNE"
+        title="MEMORY_AND_AUDIT"
+        name="MOON"
         status="ATIVO"
-        icon="♆"
+        icon="☾"
         variant="blue"
-      />
-      <PlanetCard
-        title="JUDGMENT_PLANE"
-        name="THEMIS"
-        status="ATIVO"
-        icon="⚖"
-        variant="gold"
       />
     </div>
 
     <!-- Terminal Feed -->
     <div class="max-w-2xl">
-      <TerminalFeed />
+      <TerminalFeed lines={pt.home.feed_lines} title={pt.home.feed_title} />
     </div>
   </section>
 </BaseLayout>
