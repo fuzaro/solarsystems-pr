@@ -3,6 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PlanetCard from '../../components/PlanetCard.astro';
 import SchematicDiagram from '../../components/SchematicDiagram.astro';
 import en from '../../i18n/en.json';
+
+const [execTag, ...execRest] = en.how.execution_note.split(' — ');
+const execBody = execRest.join(' — ');
 ---
 <BaseLayout title="Solar Systems AI — How It Works" lang="en" currentPage="how">
   <section class="max-w-5xl mx-auto">
@@ -55,6 +58,12 @@ import en from '../../i18n/en.json';
             </div>
           </PlanetCard>
         ))}
+      </div>
+
+      <!-- Autonomous execution note -->
+      <div class="mt-6 bg-theme-surface rounded shadow-sm px-5 py-4">
+        <div class="font-mono text-sm text-theme-accent font-bold tracking-wider mb-1">{execTag}</div>
+        <p class="font-mono text-xs text-theme-muted leading-relaxed">{execBody}</p>
       </div>
     </div>
   </section>

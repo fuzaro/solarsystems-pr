@@ -11,7 +11,7 @@
     "badge": "OPERATIONAL PROTOCOL ACTIVE",
     "title": "SOLAR SYSTEMS AI",
     "subtitle": "PLATFORM",
-    "description": "The definitive command interface for large-scale data processing. Orchestrating AI agents with precision, transforming complex workflows into a robust architecture of virtual punch cards.",
+    "description": "The governed control plane for AI agents in production. Every task passes through proven identity, fail-closed authorization and tamper-evident audit — orchestrating agents with precision inside a robust architecture of virtual punch cards.",
     "cta_primary": "INITIALIZE_CORE",
     "cta_secondary": "PROTOCOLS"
   },
@@ -43,17 +43,18 @@
     "architecture_title": "SYSTEM_ARCHITECTURE",
     "planets": [
       { "title": "CORE_ORCHESTRATOR", "name": "SUN", "description": "Routes tasks, manages lifecycle", "icon": "☀", "variant": "orange", "status": "OPTIMIZED" },
-      { "title": "MEMORY_AND_AUDIT", "name": "MOON", "description": "Stores knowledge, maintains compliance records", "icon": "☾", "variant": "blue", "status": "ACTIVE" },
-      { "title": "MESSAGING_BUS", "name": "MERCURY", "description": "Handles all inter-system communication", "icon": "☿", "variant": "blue", "status": "ACTIVE" },
+      { "title": "MEMORY_AND_AUDIT", "name": "MOON", "description": "Tamper-evident audit chain; knowledge, memory and step ledger", "icon": "☾", "variant": "blue", "status": "ACTIVE" },
+      { "title": "MESSAGING_BUS", "name": "MERCURY", "description": "Event backbone (NATS JetStream) across the platform", "icon": "☿", "variant": "blue", "status": "ACTIVE" },
       { "title": "ENTRY_POINT", "name": "VENUS", "description": "The only door in. All tasks enter here.", "icon": "♀", "variant": "gold", "status": "ACTIVE" },
       { "title": "EXECUTION_ENGINE", "name": "MARS", "description": "Provisions and manages secure containers", "icon": "♂", "variant": "orange", "status": "ACTIVE" },
       { "title": "SCALING_LAYER", "name": "JUPITER", "description": "Distributes load, manages capacity", "icon": "♃", "variant": "green", "status": "PLANNED" },
-      { "title": "IDENTITY_AND_GOVERNANCE", "name": "SATURN", "description": "Manages who can do what, tracks budgets", "icon": "♄", "variant": "gold", "status": "ACTIVE" },
+      { "title": "IDENTITY_AND_GOVERNANCE", "name": "SATURN", "description": "Owns principals, tenants and roles; tracks quota, budget and billing", "icon": "♄", "variant": "gold", "status": "ACTIVE" },
       { "title": "EXPERIMENTATION", "name": "URANUS", "description": "Safe testing of new capabilities", "icon": "♅", "variant": "green", "status": "PLANNED" },
-      { "title": "INFERENCE_GATEWAY", "name": "NEPTUNE", "description": "Routes AI calls to optimal providers", "icon": "♆", "variant": "blue", "status": "ACTIVE" },
-      { "title": "SECURITY_AUTHORITY", "name": "PLUTO", "description": "Manages secrets, authorization, encryption", "icon": "♇", "variant": "orange", "status": "ACTIVE" },
-      { "title": "JUDGMENT_PLANE", "name": "THEMIS", "description": "Evaluates quality and reputation over time", "icon": "⚖", "variant": "gold", "status": "ACTIVE" }
-    ]
+      { "title": "INFERENCE_GATEWAY", "name": "NEPTUNE", "description": "Multi-provider inference routing — quality without lock-in", "icon": "♆", "variant": "blue", "status": "ACTIVE" },
+      { "title": "SECURITY_AUTHORITY", "name": "PLUTO", "description": "Security & authorization — access checks (FGA), session-token minting, secret resolution", "icon": "♇", "variant": "orange", "status": "ACTIVE" },
+      { "title": "JUDGMENT_PLANE", "name": "THEMIS", "description": "Judgment plane — observes and scores quality and reputation in shadow", "icon": "⚖", "variant": "gold", "status": "ACTIVE" }
+    ],
+    "execution_note": "AUTONOMOUS_EXECUTION — GDWG drives agent loops over a governed graph. Harness-agnostic: the same governance contract holds for Claude Code, Codex and Cursor, driven via MCP."
   },
   "principles": {
     "headline": "PRINCIPLES",
@@ -73,13 +74,13 @@
       },
       {
         "title": "SECURITY",
-        "tagline": "Credentials are short-lived, scoped, and never stored.",
+        "tagline": "Identity proven at every hop; credentials short-lived and scoped.",
         "description": "Secrets exist only for the duration of a task and only in the scope where they're needed. No static keys, no permanent access, no credential leakage.",
         "variant": "green"
       },
       {
         "title": "PRIVILEGE_CONTROL",
-        "tagline": "Agents see only what they need.",
+        "tagline": "Fail-closed by default — agents see only what they need.",
         "description": "Access is earned, not assumed. Every agent operates under strict privilege modes — from fully supervised to autonomous — with boundaries that cannot be overridden from within.",
         "variant": "gold"
       },
@@ -101,8 +102,9 @@
     "headline": "STATUS",
     "subtitle": "Operational log. Verified milestones.",
     "milestones": [
+      { "timestamp": "2026-06-11", "level": "LIVE", "message": "HARNESS_AGNOSTICISM — Governance contract validated identically across Claude Code, Codex and Cursor via MCP (3/3)" },
       { "timestamp": "2026-05-07", "level": "LIVE", "message": "AGENT_DELEGATION — Agents can autonomously delegate sub-tasks to specialized workers" },
-      { "timestamp": "2026-05-06", "level": "LIVE", "message": "JUDGMENT_SYSTEM — Quality assessment operational with statistical convergence confirmed" },
+      { "timestamp": "2026-05-06", "level": "LIVE", "message": "JUDGMENT_SYSTEM — Quality assessment operating in shadow; statistical convergence confirmed" },
       { "timestamp": "2026-05-04", "level": "LIVE", "message": "REPUTATION_ENGINE — Performance tracking across 121 evaluation cycles" },
       { "timestamp": "2026-04-25", "level": "LIVE", "message": "FULL_LIFECYCLE — End-to-end 7-step compliance pipeline operational" },
       { "timestamp": "2026-04-23", "level": "LIVE", "message": "SECURITY_LAYER — Authorization, secrets management, and token issuance active" },

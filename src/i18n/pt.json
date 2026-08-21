@@ -11,7 +11,7 @@
     "badge": "PROTOCOLO OPERACIONAL ATIVO",
     "title": "SOLAR SYSTEMS AI",
     "subtitle": "PLATAFORMA",
-    "description": "A interface de comando definitiva para processamento de dados em larga escala. Orquestrando agentes de IA com precisão, transformando fluxos complexos em uma arquitetura robusta de cartões perfurados virtuais.",
+    "description": "O plano de controle governado para agentes de IA em produção. Cada tarefa passa por identidade provada, autorização fail-closed e auditoria à prova de adulteração — orquestrando agentes com precisão, numa arquitetura robusta de cartões perfurados virtuais.",
     "cta_primary": "INICIALIZAR_CORE",
     "cta_secondary": "PROTOCOLOS"
   },
@@ -43,17 +43,18 @@
     "architecture_title": "ARQUITETURA_DO_SISTEMA",
     "planets": [
       { "title": "CORE_ORCHESTRATOR", "name": "SUN", "description": "Roteia tarefas, gerencia o ciclo de vida", "icon": "☀", "variant": "orange", "status": "OTIMIZADO" },
-      { "title": "MEMORY_AND_AUDIT", "name": "MOON", "description": "Armazena conhecimento, mantém registros de conformidade", "icon": "☾", "variant": "blue", "status": "ATIVO" },
-      { "title": "MESSAGING_BUS", "name": "MERCURY", "description": "Gerencia toda a comunicação entre sistemas", "icon": "☿", "variant": "blue", "status": "ATIVO" },
+      { "title": "MEMORY_AND_AUDIT", "name": "MOON", "description": "Cadeia de auditoria à prova de adulteração; conhecimento, memória e step ledger", "icon": "☾", "variant": "blue", "status": "ATIVO" },
+      { "title": "MESSAGING_BUS", "name": "MERCURY", "description": "Backbone de eventos (NATS JetStream) de toda a plataforma", "icon": "☿", "variant": "blue", "status": "ATIVO" },
       { "title": "ENTRY_POINT", "name": "VENUS", "description": "A única porta de entrada. Todas as tarefas passam por aqui.", "icon": "♀", "variant": "gold", "status": "ATIVO" },
       { "title": "EXECUTION_ENGINE", "name": "MARS", "description": "Provisiona e gerencia contêineres seguros", "icon": "♂", "variant": "orange", "status": "ATIVO" },
       { "title": "SCALING_LAYER", "name": "JUPITER", "description": "Distribui carga, gerencia capacidade", "icon": "♃", "variant": "green", "status": "PLANEJADO" },
-      { "title": "IDENTITY_AND_GOVERNANCE", "name": "SATURN", "description": "Gerencia quem pode fazer o quê, acompanha orçamentos", "icon": "♄", "variant": "gold", "status": "ATIVO" },
+      { "title": "IDENTITY_AND_GOVERNANCE", "name": "SATURN", "description": "Dono de principais, tenants e papéis; controla quota, orçamento e billing", "icon": "♄", "variant": "gold", "status": "ATIVO" },
       { "title": "EXPERIMENTATION", "name": "URANUS", "description": "Testes seguros de novas capacidades", "icon": "♅", "variant": "green", "status": "PLANEJADO" },
-      { "title": "INFERENCE_GATEWAY", "name": "NEPTUNE", "description": "Roteia chamadas de IA para provedores otimizados", "icon": "♆", "variant": "blue", "status": "ATIVO" },
-      { "title": "SECURITY_AUTHORITY", "name": "PLUTO", "description": "Gerencia segredos, autorização e criptografia", "icon": "♇", "variant": "orange", "status": "ATIVO" },
-      { "title": "JUDGMENT_PLANE", "name": "THEMIS", "description": "Avalia qualidade e reputação ao longo do tempo", "icon": "⚖", "variant": "gold", "status": "ATIVO" }
-    ]
+      { "title": "INFERENCE_GATEWAY", "name": "NEPTUNE", "description": "Roteamento de inferência multi-provider — qualidade sem lock-in", "icon": "♆", "variant": "blue", "status": "ATIVO" },
+      { "title": "SECURITY_AUTHORITY", "name": "PLUTO", "description": "Segurança e autorização — checagem de acesso (FGA), mint de session-token, resolução de segredos", "icon": "♇", "variant": "orange", "status": "ATIVO" },
+      { "title": "JUDGMENT_PLANE", "name": "THEMIS", "description": "Plano de julgamento — observa e pontua qualidade e reputação em shadow", "icon": "⚖", "variant": "gold", "status": "ATIVO" }
+    ],
+    "execution_note": "EXECUÇÃO_AUTÔNOMA — o GDWG conduz loops de agentes sobre um grafo governado. Agnóstico de harness: o mesmo contrato de governança vale para Claude Code, Codex e Cursor, dirigidos via MCP."
   },
   "principles": {
     "headline": "PRINCÍPIOS",
@@ -73,13 +74,13 @@
       },
       {
         "title": "SECURITY",
-        "tagline": "Credenciais são efêmeras, limitadas e nunca armazenadas.",
+        "tagline": "Identidade provada a cada salto; credenciais efêmeras e escopadas.",
         "description": "Segredos existem apenas durante a execução de uma tarefa e apenas no escopo onde são necessários. Sem chaves estáticas, sem acesso permanente, sem vazamento de credenciais.",
         "variant": "green"
       },
       {
         "title": "PRIVILEGE_CONTROL",
-        "tagline": "Agentes veem apenas o que precisam.",
+        "tagline": "Fail-closed por padrão — agentes veem só o necessário.",
         "description": "Acesso é conquistado, não assumido. Todo agente opera sob modos estritos de privilégio — de totalmente supervisionado a autônomo — com limites que não podem ser sobrepostos internamente.",
         "variant": "gold"
       },
@@ -101,8 +102,9 @@
     "headline": "STATUS",
     "subtitle": "Registro operacional. Marcos verificados.",
     "milestones": [
+      { "timestamp": "2026-06-11", "level": "ATIVO", "message": "AGNOSTICISMO_DE_HARNESS — Contrato de governança validado de forma idêntica em Claude Code, Codex e Cursor via MCP (3/3)" },
       { "timestamp": "2026-05-07", "level": "ATIVO", "message": "AGENT_DELEGATION — Agentes podem delegar sub-tarefas autonomamente a trabalhadores especializados" },
-      { "timestamp": "2026-05-06", "level": "ATIVO", "message": "JUDGMENT_SYSTEM — Avaliação de qualidade operacional com convergência estatística confirmada" },
+      { "timestamp": "2026-05-06", "level": "ATIVO", "message": "JUDGMENT_SYSTEM — Avaliação de qualidade operando em shadow; convergência estatística confirmada" },
       { "timestamp": "2026-05-04", "level": "ATIVO", "message": "REPUTATION_ENGINE — Rastreamento de desempenho em 121 ciclos de avaliação" },
       { "timestamp": "2026-04-25", "level": "ATIVO", "message": "FULL_LIFECYCLE — Pipeline de conformidade ponta-a-ponta de 7 etapas operacional" },
       { "timestamp": "2026-04-23", "level": "ATIVO", "message": "SECURITY_LAYER — Autorização, gerenciamento de segredos e emissão de tokens ativos" },
