@@ -2,12 +2,13 @@
 /* PlanetCard — Displays a planet/service node with colored header and status */
 interface Props {
   title: string;
-  name: string;
+  /* name/status são opcionais: cartões de conceito (ex.: casos de uso) usam só o cabeçalho + slot */
+  name?: string;
   status?: string;
   icon?: string;
   variant?: 'orange' | 'blue' | 'gold' | 'green';
 }
-const { title, name, status = 'OPTIMIZED', icon = '◆', variant = 'blue' } = Astro.props;
+const { title, name = '', status = '', icon = '◆', variant = 'blue' } = Astro.props;
 
 const variantClasses: Record<string, string> = {
   orange: 'bg-theme-card-1',
@@ -23,12 +24,14 @@ const variantClasses: Record<string, string> = {
     <span class="text-theme-nav-text/70 text-sm">{icon}</span>
   </div>
   <!-- Body -->
-  <div class="px-4 py-5 text-center">
+  <div class:list={['px-4 text-center', name || status ? 'py-5' : 'pt-5 pb-2']}>
     <div class="text-3xl mb-3 text-theme-text">{icon}</div>
-    <div class="text-sm tracking-[0.15em] text-theme-text font-bold mb-2">{name}</div>
-    <div class="text-[10px] tracking-wider text-theme-muted">
-      STATUS: <span class="text-theme-success">{status}</span>
-    </div>
+    {name && <div class="text-sm tracking-[0.15em] text-theme-text font-bold mb-2">{name}</div>}
+    {status && (
+      <div class="text-[10px] tracking-wider text-theme-muted">
+        STATUS: <span class="text-theme-success">{status}</span>
+      </div>
+    )}
   </div>
   <slot />
 </div>

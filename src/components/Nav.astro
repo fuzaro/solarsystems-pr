@@ -1,19 +1,24 @@
 ---
 /* Nav — Top navigation bar with logo, links, and language switcher */
+import en from '../i18n/en.json';
+import pt from '../i18n/pt.json';
+
 interface Props {
   lang?: string;
   currentPage?: string;
 }
 const { lang = 'en', currentPage = '' } = Astro.props;
+const t = lang === 'pt' ? pt : en;
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL.slice(0, -1) : import.meta.env.BASE_URL;
 
 const links = [
-  { href: `${base}/${lang}/`, label: 'HOME', id: 'home' },
-  { href: `${base}/${lang}/why`, label: 'WHY', id: 'why' },
-  { href: `${base}/${lang}/how`, label: 'HOW_IT_WORKS', id: 'how' },
-  { href: `${base}/${lang}/principles`, label: 'PRINCIPLES', id: 'principles' },
-  { href: `${base}/${lang}/status`, label: 'STATUS', id: 'status' },
-  { href: `${base}/${lang}/about`, label: 'ABOUT', id: 'about' },
+  { href: `${base}/${lang}/`, label: t.nav.home, id: 'home' },
+  { href: `${base}/${lang}/why`, label: t.nav.why, id: 'why' },
+  { href: `${base}/${lang}/how`, label: t.nav.how, id: 'how' },
+  { href: `${base}/${lang}/principles`, label: t.nav.principles, id: 'principles' },
+  { href: `${base}/${lang}/usecases`, label: t.nav.usecases, id: 'usecases' },
+  { href: `${base}/${lang}/status`, label: t.nav.status, id: 'status' },
+  { href: `${base}/${lang}/about`, label: t.nav.about, id: 'about' },
 ];
 ---
 <nav class="bg-theme-nav text-theme-nav-text font-mono">
@@ -27,12 +32,12 @@ const links = [
     </a>
 
     <!-- Desktop nav links -->
-    <div class="hidden md:flex items-center gap-1">
+    <div class="hidden lg:flex items-center gap-0.5">
       {links.map((link) => (
         <a
           href={link.href}
           class:list={[
-            'px-3 py-2 text-xs tracking-wider transition-colors duration-150',
+            'px-2.5 py-2 text-[11px] tracking-wider transition-colors duration-150 whitespace-nowrap',
             currentPage === link.id
               ? 'text-theme-accent-2 border-b-2 border-theme-accent-2'
               : 'text-theme-muted hover:text-theme-nav-text',
@@ -50,7 +55,7 @@ const links = [
       <!-- Mobile hamburger -->
       <button
         id="mobile-menu-btn"
-        class="md:hidden text-theme-muted hover:text-theme-nav-text transition-colors"
+        class="lg:hidden text-theme-muted hover:text-theme-nav-text transition-colors"
         aria-label="Toggle menu"
       >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,7 +66,7 @@ const links = [
   </div>
 
   <!-- Mobile dropdown -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-theme-border">
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-theme-border">
     <div class="px-4 py-2 space-y-1">
       {links.map((link) => (
         <a

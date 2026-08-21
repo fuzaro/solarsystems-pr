@@ -1,5 +1,5 @@
 {
-  "nav": { "home": "INÍCIO", "why": "POR_QUE", "how": "COMO_FUNCIONA", "principles": "PRINCÍPIOS", "status": "STATUS", "about": "SOBRE" },
+  "nav": { "home": "INÍCIO", "why": "POR_QUE", "how": "COMO_FUNCIONA", "principles": "PRINCÍPIOS", "status": "STATUS", "about": "SOBRE", "usecases": "CASOS_DE_USO" },
   "home": {
     "badge": "GOVERNANÇA POR CONSTRUÇÃO",
     "title": "SOLAR SYSTEMS AI",
@@ -98,6 +98,46 @@
       { "title": "NO_LOCK_IN", "tagline": "Modelo e agente são plugáveis — agnóstico de harness via MCP.", "description": "A inferência passa por um único gateway, entre provedores externos e modelos locais. O contrato de governança vale de forma idêntica para Claude Code, Codex e Cursor: o ativo é o método e o grafo, não o fornecedor.", "variant": "blue" },
       { "title": "BOUNDED_EFFORT", "tagline": "Toda tarefa declara seu custo antes de executar.", "description": "Sem processos descontrolados, sem surpresas na fatura. Toda execução possui um orçamento pré-declarado de tempo, recursos e operações. Se o orçamento for excedido, a tarefa é encerrada com segurança.", "variant": "green" }
     ]
+  },
+  "usecases": {
+    "headline": "CASOS_DE_USO",
+    "subtitle": "Onde a governança destrava valor — e onde ela se vende sozinha.",
+    "cases_title": "CASOS_HORIZONTAIS",
+    "cases": [
+      { "title": "COPILOTO_SOBRE_DADOS_SENSÍVEIS", "icon": "◈", "variant": "blue", "text": "Agentes consultam sistemas internos com acesso concedido por política e trilha do que tocaram — atendível a uma auditoria." },
+      { "title": "AUTOMAÇÃO_DE_PROCESSOS_REGULADOS", "icon": "◆", "variant": "orange", "text": "Fluxos em setores fiscalizados, com prova de autoridade e não-repúdio em cada passo." },
+      { "title": "PLATAFORMA_INTERNA_DE_AGENTES", "icon": "◇", "variant": "gold", "text": "As áreas criam agentes sem reinventar segurança; a governança é serviço compartilhado, não reescrita por time." },
+      { "title": "ORQUESTRAÇÃO_MULTI_MODELO", "icon": "◉", "variant": "green", "text": "Roteia cada tarefa ao modelo que serve em custo e qualidade — sem lock-in e sem migração dolorosa." },
+      { "title": "AGENTES_DE_CÓDIGO_GOVERNADOS", "icon": "⌘", "variant": "blue", "text": "Rode Claude Code, Codex ou Cursor sob a identidade, autorização, quota e auditoria da plataforma — em vez de dar acesso solto a um agente de IDE." },
+      { "title": "LOOPS_AUTÔNOMOS_DE_CONHECIMENTO", "icon": "◎", "variant": "orange", "text": "O GDWG decompõe uma meta em passos, seleciona autores, mede aptidão e reavalia — com detecção de desvio sobre um grafo governado." }
+    ],
+    "verticals_title": "VERTICAIS_EM_FOCO",
+    "verticals_intro": "O produto é horizontal. A conversa é vertical: nestes dois, a governança não é diferencial — é pré-requisito de compra.",
+    "verticals": [
+      {
+        "name": "SERVIÇOS_FINANCEIROS",
+        "icon": "◱",
+        "variant": "gold",
+        "items": [
+          "Não-repúdio e trilha para auditoria e reguladores.",
+          "Dados de cliente alcançados por política, segregados por mesa e área.",
+          "Custo atribuível por unidade de negócio, por medição.",
+          "Sem lock-in: poder de negociação com fornecedores de modelo."
+        ]
+      },
+      {
+        "name": "SAÚDE",
+        "icon": "◰",
+        "variant": "green",
+        "items": [
+          "Dados sensíveis atrás de autorização de mundo fechado e isolamento por tenant.",
+          "Prova de quem acessou o quê, para revisão de conformidade.",
+          "Agentes clínicos e administrativos com identidade rastreável.",
+          "Uma trilha à prova de adulteração que serve como evidência de controle."
+        ]
+      }
+    ],
+    "note": "IMPLANTAÇÃO_PRIVADA — a pilha é auto-hospedável (Nomad, Consul, Vault, PostgreSQL, OpenFGA, Keycloak, NATS, Neo4j), então o dado clínico e regulado pode não sair da instituição."
   },
   "status": {
     "headline": "STATUS",

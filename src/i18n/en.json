@@ -1,5 +1,5 @@
 {
-  "nav": { "home": "HOME", "why": "WHY", "how": "HOW_IT_WORKS", "principles": "PRINCIPLES", "status": "STATUS", "about": "ABOUT" },
+  "nav": { "home": "HOME", "why": "WHY", "how": "HOW_IT_WORKS", "principles": "PRINCIPLES", "status": "STATUS", "about": "ABOUT", "usecases": "USE_CASES" },
   "home": {
     "badge": "GOVERNANCE BY CONSTRUCTION",
     "title": "SOLAR SYSTEMS AI",
@@ -98,6 +98,46 @@
       { "title": "NO_LOCK_IN", "tagline": "Model and agent are pluggable — harness-agnostic via MCP.", "description": "Inference routes through a single gateway across external providers and local models. The governance contract holds identically for Claude Code, Codex and Cursor: the method and the graph are the asset, not the vendor.", "variant": "blue" },
       { "title": "BOUNDED_EFFORT", "tagline": "Every task declares its cost before running.", "description": "No runaway processes, no surprise bills. Every execution has a pre-declared budget for time, resources, and operations. If the budget is exceeded, the task is safely terminated.", "variant": "green" }
     ]
+  },
+  "usecases": {
+    "headline": "USE_CASES",
+    "subtitle": "Where governance unlocks value — and where it sells itself.",
+    "cases_title": "HORIZONTAL_CASES",
+    "cases": [
+      { "title": "SENSITIVE_DATA_COPILOT", "icon": "◈", "variant": "blue", "text": "Agents query internal systems with access granted by policy and a trail of what they touched — answerable to an audit." },
+      { "title": "REGULATED_PROCESS_AUTOMATION", "icon": "◆", "variant": "orange", "text": "Workflows in supervised sectors, with proof of authority and non-repudiation at every step." },
+      { "title": "INTERNAL_AGENT_PLATFORM", "icon": "◇", "variant": "gold", "text": "Business areas build agents without reinventing security; governance is a shared service, not a per-team rewrite." },
+      { "title": "MULTI_MODEL_ORCHESTRATION", "icon": "◉", "variant": "green", "text": "Route each task to the model that fits on cost and quality — no lock-in, no painful migration." },
+      { "title": "GOVERNED_CODE_AGENTS", "icon": "⌘", "variant": "blue", "text": "Run Claude Code, Codex or Cursor under the platform's identity, authorization, quota and audit — instead of granting an IDE agent loose access." },
+      { "title": "AUTONOMOUS_KNOWLEDGE_LOOPS", "icon": "◎", "variant": "orange", "text": "GDWG decomposes a goal into steps, selects authors, measures fitness and re-evaluates — with drift detection over a governed graph." }
+    ],
+    "verticals_title": "VERTICALS_IN_FOCUS",
+    "verticals_intro": "The product is horizontal. The conversation is vertical: in these two, governance is not a differentiator — it is a precondition of purchase.",
+    "verticals": [
+      {
+        "name": "FINANCIAL_SERVICES",
+        "icon": "◱",
+        "variant": "gold",
+        "items": [
+          "Non-repudiation and a trail for auditors and regulators.",
+          "Client data reached by policy, segregated by desk and area.",
+          "Cost attributable per business unit through metering.",
+          "No lock-in: negotiating power against model vendors."
+        ]
+      },
+      {
+        "name": "HEALTHCARE",
+        "icon": "◰",
+        "variant": "green",
+        "items": [
+          "Sensitive data behind closed-world authorization and tenant isolation.",
+          "Proof of who accessed what, for compliance review.",
+          "Clinical and administrative agents with traceable identity.",
+          "A tamper-evident trail that stands as evidence of control."
+        ]
+      }
+    ],
+    "note": "PRIVATE_DEPLOYMENT — the stack is self-hostable (Nomad, Consul, Vault, PostgreSQL, OpenFGA, Keycloak, NATS, Neo4j), so clinical and regulated data can stay inside the institution."
   },
   "status": {
     "headline": "STATUS",
