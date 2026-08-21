@@ -38,7 +38,7 @@
     "stat_subsystems": "9 operational subsystems",
     "stat_lifecycle": "7-step compliance lifecycle",
     "stat_principles": "6 non-negotiable principles",
-    "stat_audits": "Zero unaudited executions"
+    "stat_audits": "Audit chain with write-time lock (2026-08-05)"
   },
   "how": {
     "headline": "HOW_IT_WORKS",
@@ -50,7 +50,7 @@
       { "number": "04", "name": "EXECUTION", "description": "Your agent works within strict boundaries" },
       { "number": "05", "name": "EVALUATION", "description": "Output quality is verified before delivery" },
       { "number": "06", "name": "DELIVERY", "description": "Results are returned to you" },
-      { "number": "07", "name": "AUDIT", "description": "An immutable compliance record is created" }
+      { "number": "07", "name": "AUDIT", "description": "A tamper-evident compliance record is written" }
     ],
     "architecture_title": "SYSTEM_ARCHITECTURE",
     "planets": [
@@ -69,43 +69,43 @@
     "execution_note": "AUTONOMOUS_EXECUTION — GDWG drives agent loops over a governed graph. Harness-agnostic: the same governance contract holds for Claude Code, Codex and Cursor, driven via MCP."
   },
   "principles": {
-    "headline": "PRINCIPLES",
-    "subtitle": "Six guarantees. Not aspirations — architecture.",
+    "headline": "GOVERNANCE_BY_CONSTRUCTION",
+    "subtitle": "Guarantees by construction — properties of the architecture, not checklists someone must remember to run.",
     "guarantees": [
       {
-        "title": "ADEQUATION",
-        "tagline": "Right agent, right task, every time.",
-        "description": "Every task is profiled before execution — not guessed. The system selects the optimal agent based on task characteristics, ensuring consistent quality without manual configuration.",
+        "title": "IDENTITY_PER_HOP",
+        "tagline": "Identity is derived at every hop — never read from the request body.",
+        "description": "Venus derives the caller from the token; child agents act on-behalf of the real principal through a session mint issued by the security plane. 'On whose behalf' travels as a signed token, not as a field someone can declare.",
         "variant": "blue"
       },
       {
-        "title": "EFFORT_CONTROL",
-        "tagline": "Every task declares its cost before running.",
-        "description": "No runaway processes, no surprise bills. Every execution has a pre-declared budget for time, resources, and operations. If the budget is exceeded, the task is safely terminated.",
+        "title": "EXECUTABLE_POLICY",
+        "tagline": "Authorization is executable, closed-world policy (OpenFGA): no explicit grant, no access.",
+        "description": "Access is a relation in an authorization model, not a convention in a prompt. Capability grants are per tenant, checked on each sensitive call, and the check is auditable after the fact.",
         "variant": "orange"
       },
       {
-        "title": "SECURITY",
-        "tagline": "Identity proven at every hop; credentials short-lived and scoped.",
-        "description": "Secrets exist only for the duration of a task and only in the scope where they're needed. No static keys, no permanent access, no credential leakage.",
+        "title": "TAMPER_EVIDENT_AUDIT",
+        "tagline": "Tamper-evident audit trail — what, who, under what authority, over which data.",
+        "description": "Audit records are hash-chained in the Moon, written under a per-tenant write-time lock, with write scope restricted. Chaining gives evidence of tampering without the cost of distributed consensus.",
         "variant": "green"
       },
       {
-        "title": "PRIVILEGE_CONTROL",
-        "tagline": "Fail-closed by default — agents see only what they need.",
-        "description": "Access is earned, not assumed. Every agent operates under strict privilege modes — from fully supervised to autonomous — with boundaries that cannot be overridden from within.",
+        "title": "MULTI_TENANT_ISOLATION",
+        "tagline": "Tenant, quota and budget scoped per principal (Saturn).",
+        "description": "Tenants are first-class: principals, roles, capability plans, quota and budget live behind one owner, and reads resolve the tenant from the token rather than trusting a query parameter.",
         "variant": "gold"
       },
       {
-        "title": "QUALITY_CONTROL",
-        "tagline": "Every output is evaluated before delivery.",
-        "description": "Nothing reaches you without passing quality gates. Pre-execution, mid-execution, and post-execution checkpoints ensure consistent, reliable results.",
+        "title": "NO_LOCK_IN",
+        "tagline": "Model and agent are pluggable — harness-agnostic via MCP.",
+        "description": "Inference routes through a single gateway across external providers and local models. The governance contract holds identically for Claude Code, Codex and Cursor: the method and the graph are the asset, not the vendor.",
         "variant": "blue"
       },
       {
-        "title": "IDEMPOTENCY",
-        "tagline": "Run it twice, get the same result.",
-        "description": "The same operation applied multiple times produces the same outcome. Your system is resilient to retries, restarts, and network failures by design.",
+        "title": "BOUNDED_EFFORT",
+        "tagline": "Every task declares its cost before running.",
+        "description": "No runaway processes, no surprise bills. Every execution has a pre-declared budget for time, resources, and operations. If the budget is exceeded, the task is safely terminated.",
         "variant": "green"
       }
     ]

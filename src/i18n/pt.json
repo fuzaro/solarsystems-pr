@@ -38,7 +38,7 @@
     "stat_subsystems": "9 subsistemas operacionais",
     "stat_lifecycle": "7 etapas do ciclo de conformidade",
     "stat_principles": "6 princípios inegociáveis",
-    "stat_audits": "Zero execuções sem auditoria"
+    "stat_audits": "Cadeia de auditoria com trava de escrita (2026-08-05)"
   },
   "how": {
     "headline": "COMO_FUNCIONA",
@@ -50,7 +50,7 @@
       { "number": "04", "name": "EXECUTION", "description": "Seu agente trabalha dentro de limites estritos" },
       { "number": "05", "name": "EVALUATION", "description": "A qualidade da saída é verificada antes da entrega" },
       { "number": "06", "name": "DELIVERY", "description": "Os resultados são retornados a você" },
-      { "number": "07", "name": "AUDIT", "description": "Um registro imutável de conformidade é criado" }
+      { "number": "07", "name": "AUDIT", "description": "Um registro de conformidade à prova de adulteração é gravado" }
     ],
     "architecture_title": "ARQUITETURA_DO_SISTEMA",
     "planets": [
@@ -69,43 +69,43 @@
     "execution_note": "EXECUÇÃO_AUTÔNOMA — o GDWG conduz loops de agentes sobre um grafo governado. Agnóstico de harness: o mesmo contrato de governança vale para Claude Code, Codex e Cursor, dirigidos via MCP."
   },
   "principles": {
-    "headline": "PRINCÍPIOS",
-    "subtitle": "Seis garantias. Não aspirações — arquitetura.",
+    "headline": "GOVERNANÇA_POR_CONSTRUÇÃO",
+    "subtitle": "Garantias por construção — propriedades da arquitetura, não checklists que alguém precisa lembrar de rodar.",
     "guarantees": [
       {
-        "title": "ADEQUATION",
-        "tagline": "Agente certo, tarefa certa, sempre.",
-        "description": "Toda tarefa é perfilada antes da execução — não adivinhada. O sistema seleciona o agente ideal com base nas características da tarefa, garantindo qualidade consistente sem configuração manual.",
+        "title": "IDENTITY_PER_HOP",
+        "tagline": "A identidade é derivada a cada salto — nunca lida do corpo da requisição.",
+        "description": "O Venus deriva o chamador a partir do token; agentes-filhos agem em nome do principal real por um mint de sessão emitido pelo plano de segurança. O 'em nome de quem' viaja como token assinado, não como campo que alguém possa declarar.",
         "variant": "blue"
       },
       {
-        "title": "EFFORT_CONTROL",
-        "tagline": "Toda tarefa declara seu custo antes de executar.",
-        "description": "Sem processos descontrolados, sem surpresas na fatura. Toda execução possui um orçamento pré-declarado de tempo, recursos e operações. Se o orçamento for excedido, a tarefa é encerrada com segurança.",
+        "title": "EXECUTABLE_POLICY",
+        "tagline": "A autorização é política executável de mundo fechado (OpenFGA): sem grant explícito, sem acesso.",
+        "description": "Acesso é uma relação num modelo de autorização, não uma convenção num prompt. Os grants de capacidade são por tenant, checados a cada chamada sensível, e a checagem é auditável depois do fato.",
         "variant": "orange"
       },
       {
-        "title": "SECURITY",
-        "tagline": "Identidade provada a cada salto; credenciais efêmeras e escopadas.",
-        "description": "Segredos existem apenas durante a execução de uma tarefa e apenas no escopo onde são necessários. Sem chaves estáticas, sem acesso permanente, sem vazamento de credenciais.",
+        "title": "TAMPER_EVIDENT_AUDIT",
+        "tagline": "Trilha de auditoria à prova de adulteração — o quê, quem, sob que autoridade, sobre quais dados.",
+        "description": "Os registros de auditoria são encadeados por hash no Moon, gravados sob trava de escrita por tenant e com escopo de escrita restrito. O encadeamento dá evidência de adulteração sem o custo de consenso distribuído.",
         "variant": "green"
       },
       {
-        "title": "PRIVILEGE_CONTROL",
-        "tagline": "Fail-closed por padrão — agentes veem só o necessário.",
-        "description": "Acesso é conquistado, não assumido. Todo agente opera sob modos estritos de privilégio — de totalmente supervisionado a autônomo — com limites que não podem ser sobrepostos internamente.",
+        "title": "MULTI_TENANT_ISOLATION",
+        "tagline": "Tenant, quota e orçamento escopados por principal (Saturn).",
+        "description": "Tenants são de primeira classe: principais, papéis, planos de capacidade, quota e orçamento vivem sob um único dono, e as leituras resolvem o tenant a partir do token em vez de confiar num parâmetro de consulta.",
         "variant": "gold"
       },
       {
-        "title": "QUALITY_CONTROL",
-        "tagline": "Toda saída é avaliada antes da entrega.",
-        "description": "Nada chega a você sem passar pelos portões de qualidade. Pontos de verificação pré-execução, durante a execução e pós-execução garantem resultados consistentes e confiáveis.",
+        "title": "NO_LOCK_IN",
+        "tagline": "Modelo e agente são plugáveis — agnóstico de harness via MCP.",
+        "description": "A inferência passa por um único gateway, entre provedores externos e modelos locais. O contrato de governança vale de forma idêntica para Claude Code, Codex e Cursor: o ativo é o método e o grafo, não o fornecedor.",
         "variant": "blue"
       },
       {
-        "title": "IDEMPOTENCY",
-        "tagline": "Execute duas vezes, obtenha o mesmo resultado.",
-        "description": "A mesma operação aplicada múltiplas vezes produz o mesmo resultado. Seu sistema é resiliente a retentivas, reinicializações e falhas de rede por projeto.",
+        "title": "BOUNDED_EFFORT",
+        "tagline": "Toda tarefa declara seu custo antes de executar.",
+        "description": "Sem processos descontrolados, sem surpresas na fatura. Toda execução possui um orçamento pré-declarado de tempo, recursos e operações. Se o orçamento for excedido, a tarefa é encerrada com segurança.",
         "variant": "green"
       }
     ]
