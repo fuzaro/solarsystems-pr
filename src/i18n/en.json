@@ -1,12 +1,5 @@
 {
-  "nav": {
-    "home": "HOME",
-    "why": "WHY",
-    "how": "HOW_IT_WORKS",
-    "principles": "PRINCIPLES",
-    "status": "STATUS",
-    "about": "ABOUT"
-  },
+  "nav": { "home": "HOME", "why": "WHY", "how": "HOW_IT_WORKS", "principles": "PRINCIPLES", "status": "STATUS", "about": "ABOUT" },
   "home": {
     "badge": "GOVERNANCE BY CONSTRUCTION",
     "title": "SOLAR SYSTEMS AI",
@@ -98,65 +91,30 @@
     "headline": "GOVERNANCE_BY_CONSTRUCTION",
     "subtitle": "Guarantees by construction — properties of the architecture, not checklists someone must remember to run.",
     "guarantees": [
-      {
-        "title": "IDENTITY_PER_HOP",
-        "tagline": "Identity is derived at every hop — never read from the request body.",
-        "description": "Venus derives the caller from the token; child agents act on-behalf of the real principal through a session mint issued by the security plane. 'On whose behalf' travels as a signed token, not as a field someone can declare.",
-        "variant": "blue"
-      },
-      {
-        "title": "EXECUTABLE_POLICY",
-        "tagline": "Authorization is executable, closed-world policy (OpenFGA): no explicit grant, no access.",
-        "description": "Access is a relation in an authorization model, not a convention in a prompt. Capability grants are per tenant, checked on each sensitive call, and the check is auditable after the fact.",
-        "variant": "orange"
-      },
-      {
-        "title": "TAMPER_EVIDENT_AUDIT",
-        "tagline": "Tamper-evident audit trail — what, who, under what authority, over which data.",
-        "description": "Audit records are hash-chained in the Moon, written under a per-tenant write-time lock, with write scope restricted. Chaining gives evidence of tampering without the cost of distributed consensus.",
-        "variant": "green"
-      },
-      {
-        "title": "MULTI_TENANT_ISOLATION",
-        "tagline": "Tenant, quota and budget scoped per principal (Saturn).",
-        "description": "Tenants are first-class: principals, roles, capability plans, quota and budget live behind one owner, and reads resolve the tenant from the token rather than trusting a query parameter.",
-        "variant": "gold"
-      },
-      {
-        "title": "NO_LOCK_IN",
-        "tagline": "Model and agent are pluggable — harness-agnostic via MCP.",
-        "description": "Inference routes through a single gateway across external providers and local models. The governance contract holds identically for Claude Code, Codex and Cursor: the method and the graph are the asset, not the vendor.",
-        "variant": "blue"
-      },
-      {
-        "title": "BOUNDED_EFFORT",
-        "tagline": "Every task declares its cost before running.",
-        "description": "No runaway processes, no surprise bills. Every execution has a pre-declared budget for time, resources, and operations. If the budget is exceeded, the task is safely terminated.",
-        "variant": "green"
-      }
+      { "title": "IDENTITY_PER_HOP", "tagline": "Identity is derived at every hop — never read from the request body.", "description": "Venus derives the caller from the token; child agents act on-behalf of the real principal through a session mint issued by the security plane. 'On whose behalf' travels as a signed token, not as a field someone can declare.", "variant": "blue" },
+      { "title": "EXECUTABLE_POLICY", "tagline": "Authorization is executable, closed-world policy (OpenFGA): no explicit grant, no access.", "description": "Access is a relation in an authorization model, not a convention in a prompt. Capability grants are per tenant, checked on each sensitive call, and the check is auditable after the fact.", "variant": "orange" },
+      { "title": "TAMPER_EVIDENT_AUDIT", "tagline": "Tamper-evident audit trail — what, who, under what authority, over which data.", "description": "Audit records are hash-chained in the Moon, written under a per-tenant write-time lock, with write scope restricted. Chaining gives evidence of tampering without the cost of distributed consensus.", "variant": "green" },
+      { "title": "MULTI_TENANT_ISOLATION", "tagline": "Tenant, quota and budget scoped per principal (Saturn).", "description": "Tenants are first-class: principals, roles, capability plans, quota and budget live behind one owner, and reads resolve the tenant from the token rather than trusting a query parameter.", "variant": "gold" },
+      { "title": "NO_LOCK_IN", "tagline": "Model and agent are pluggable — harness-agnostic via MCP.", "description": "Inference routes through a single gateway across external providers and local models. The governance contract holds identically for Claude Code, Codex and Cursor: the method and the graph are the asset, not the vendor.", "variant": "blue" },
+      { "title": "BOUNDED_EFFORT", "tagline": "Every task declares its cost before running.", "description": "No runaway processes, no surprise bills. Every execution has a pre-declared budget for time, resources, and operations. If the budget is exceeded, the task is safely terminated.", "variant": "green" }
     ]
   },
   "status": {
     "headline": "STATUS",
-    "subtitle": "Operational log. Verified milestones.",
+    "subtitle": "Verified engineering milestones. Each one measured live, on the date shown.",
     "milestones": [
-      { "timestamp": "2026-06-11", "level": "LIVE", "message": "HARNESS_AGNOSTICISM — Governance contract validated identically across Claude Code, Codex and Cursor via MCP (3/3)" },
-      { "timestamp": "2026-05-07", "level": "LIVE", "message": "AGENT_DELEGATION — Agents can autonomously delegate sub-tasks to specialized workers" },
-      { "timestamp": "2026-05-06", "level": "LIVE", "message": "JUDGMENT_SYSTEM — Quality assessment operating in shadow; statistical convergence confirmed" },
-      { "timestamp": "2026-05-04", "level": "LIVE", "message": "REPUTATION_ENGINE — Performance tracking across 121 evaluation cycles" },
-      { "timestamp": "2026-04-25", "level": "LIVE", "message": "FULL_LIFECYCLE — End-to-end 7-step compliance pipeline operational" },
-      { "timestamp": "2026-04-23", "level": "LIVE", "message": "SECURITY_LAYER — Authorization, secrets management, and token issuance active" },
-      { "timestamp": "2026-04-22", "level": "LIVE", "message": "MEMORY_SYSTEM — Unified knowledge store with deduplication and audit chain" },
-      { "timestamp": "2026-04-21", "level": "LIVE", "message": "MESSAGING_LAYER — Event streaming infrastructure with 6 communication channels" },
-      { "timestamp": "2026-04-20", "level": "LIVE", "message": "GOVERNANCE — Identity management, budget tracking, and compliance forwarding active" },
-      { "timestamp": "2026-04-18", "level": "LIVE", "message": "MONITORING_BRIDGE — Hardware telemetry integration operational" }
+      { "timestamp": "2026-08-05", "level": "VERIFIED", "message": "AUDIT_WRITE_LOCK — Per-tenant write-time lock on the audit hash-chain switched on; live gate 3/3" },
+      { "timestamp": "2026-08-01", "level": "VERIFIED", "message": "JUDGMENT_CORPUS_PROVENANCE — Shadow judgment stops injecting fabricated attribute values; every attribute is real, curated or unknown" },
+      { "timestamp": "2026-07-24", "level": "VERIFIED", "message": "SUBMISSION_PERIMETER — A caller that merely declares itself internal no longer skips the security classifier; declared-but-unproven identity is stripped" },
+      { "timestamp": "2026-07-23", "level": "VERIFIED", "message": "MASTER_CREDENTIAL_REMOVED — The full-bypass admin token is dead; every admin authorization now goes through per-user RBAC (FGA). Old token → 401, session token → 200" },
+      { "timestamp": "2026-07-14", "level": "VERIFIED", "message": "FAIL_CLOSED_CONVERSION — Six security gates converted from fail-open to fail-closed, each dated and committed (2026-07-13 → 2026-08-01)" },
+      { "timestamp": "2026-07-13", "level": "VERIFIED", "message": "SECRET_RESOLUTION_GATED — The secret-resolution endpoint stops answering without a credential: no bearer → 401" },
+      { "timestamp": "2026-07-13", "level": "VERIFIED", "message": "SESSION_KEY_DURABILITY — The session signing key moves to the vault; a restart no longer invalidates every live session" },
+      { "timestamp": "2026-07-10", "level": "VERIFIED", "message": "TENANT_FROM_TOKEN — Open read surfaces now require a credential and resolve the tenant from the token, not from a query parameter" },
+      { "timestamp": "2026-07-10", "level": "VERIFIED", "message": "FEDERATED_LOGIN — Human login federated through OIDC (Keycloak); the platform never stores a password" },
+      { "timestamp": "2026-06-11", "level": "VERIFIED", "message": "HARNESS_AGNOSTICISM — The governance contract closed identically under Claude Code, Codex and Cursor over the real MCP wire (3/3)" }
     ],
-    "system_status": "SYSTEM_STATUS: 9/11 SUBSYSTEMS OPERATIONAL | 2 PLANNED FOR NEXT PHASE"
+    "evidence_note": "EVIDENCE: each milestone is recorded in the platform's enforcement ledger with its flag, failure posture and decision record."
   },
-  "about": {
-    "headline": "ABOUT",
-    "positioning": "Solar Systems AI is built on the conviction that intelligent infrastructure should serve human ends — not demand human attention. We build systems that disappear from notice, freeing people for what matters most.",
-    "approach": "Every architectural decision reflects our belief that automation must be bounded, accountable, and in service of human presence. This is not 'AI everywhere' — this is AI precisely where it belongs.",
-    "team": "TEAM_DATA: CLASSIFIED"
-  }
+  "about": { "headline": "ABOUT", "positioning": "Solar Systems AI is built on the conviction that intelligent infrastructure should serve human ends — not demand human attention. We build systems that disappear from notice, freeing people for what matters most.", "approach": "Every architectural decision reflects our belief that automation must be bounded, accountable, and in service of human presence. This is not 'AI everywhere' — this is AI precisely where it belongs.", "team": "TEAM_DATA: CLASSIFIED" }
 }

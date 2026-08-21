@@ -1,12 +1,5 @@
 {
-  "nav": {
-    "home": "INÍCIO",
-    "why": "POR_QUE",
-    "how": "COMO_FUNCIONA",
-    "principles": "PRINCÍPIOS",
-    "status": "STATUS",
-    "about": "SOBRE"
-  },
+  "nav": { "home": "INÍCIO", "why": "POR_QUE", "how": "COMO_FUNCIONA", "principles": "PRINCÍPIOS", "status": "STATUS", "about": "SOBRE" },
   "home": {
     "badge": "GOVERNANÇA POR CONSTRUÇÃO",
     "title": "SOLAR SYSTEMS AI",
@@ -98,65 +91,30 @@
     "headline": "GOVERNANÇA_POR_CONSTRUÇÃO",
     "subtitle": "Garantias por construção — propriedades da arquitetura, não checklists que alguém precisa lembrar de rodar.",
     "guarantees": [
-      {
-        "title": "IDENTITY_PER_HOP",
-        "tagline": "A identidade é derivada a cada salto — nunca lida do corpo da requisição.",
-        "description": "O Venus deriva o chamador a partir do token; agentes-filhos agem em nome do principal real por um mint de sessão emitido pelo plano de segurança. O 'em nome de quem' viaja como token assinado, não como campo que alguém possa declarar.",
-        "variant": "blue"
-      },
-      {
-        "title": "EXECUTABLE_POLICY",
-        "tagline": "A autorização é política executável de mundo fechado (OpenFGA): sem grant explícito, sem acesso.",
-        "description": "Acesso é uma relação num modelo de autorização, não uma convenção num prompt. Os grants de capacidade são por tenant, checados a cada chamada sensível, e a checagem é auditável depois do fato.",
-        "variant": "orange"
-      },
-      {
-        "title": "TAMPER_EVIDENT_AUDIT",
-        "tagline": "Trilha de auditoria à prova de adulteração — o quê, quem, sob que autoridade, sobre quais dados.",
-        "description": "Os registros de auditoria são encadeados por hash no Moon, gravados sob trava de escrita por tenant e com escopo de escrita restrito. O encadeamento dá evidência de adulteração sem o custo de consenso distribuído.",
-        "variant": "green"
-      },
-      {
-        "title": "MULTI_TENANT_ISOLATION",
-        "tagline": "Tenant, quota e orçamento escopados por principal (Saturn).",
-        "description": "Tenants são de primeira classe: principais, papéis, planos de capacidade, quota e orçamento vivem sob um único dono, e as leituras resolvem o tenant a partir do token em vez de confiar num parâmetro de consulta.",
-        "variant": "gold"
-      },
-      {
-        "title": "NO_LOCK_IN",
-        "tagline": "Modelo e agente são plugáveis — agnóstico de harness via MCP.",
-        "description": "A inferência passa por um único gateway, entre provedores externos e modelos locais. O contrato de governança vale de forma idêntica para Claude Code, Codex e Cursor: o ativo é o método e o grafo, não o fornecedor.",
-        "variant": "blue"
-      },
-      {
-        "title": "BOUNDED_EFFORT",
-        "tagline": "Toda tarefa declara seu custo antes de executar.",
-        "description": "Sem processos descontrolados, sem surpresas na fatura. Toda execução possui um orçamento pré-declarado de tempo, recursos e operações. Se o orçamento for excedido, a tarefa é encerrada com segurança.",
-        "variant": "green"
-      }
+      { "title": "IDENTITY_PER_HOP", "tagline": "A identidade é derivada a cada salto — nunca lida do corpo da requisição.", "description": "O Venus deriva o chamador a partir do token; agentes-filhos agem em nome do principal real por um mint de sessão emitido pelo plano de segurança. O 'em nome de quem' viaja como token assinado, não como campo que alguém possa declarar.", "variant": "blue" },
+      { "title": "EXECUTABLE_POLICY", "tagline": "A autorização é política executável de mundo fechado (OpenFGA): sem grant explícito, sem acesso.", "description": "Acesso é uma relação num modelo de autorização, não uma convenção num prompt. Os grants de capacidade são por tenant, checados a cada chamada sensível, e a checagem é auditável depois do fato.", "variant": "orange" },
+      { "title": "TAMPER_EVIDENT_AUDIT", "tagline": "Trilha de auditoria à prova de adulteração — o quê, quem, sob que autoridade, sobre quais dados.", "description": "Os registros de auditoria são encadeados por hash no Moon, gravados sob trava de escrita por tenant e com escopo de escrita restrito. O encadeamento dá evidência de adulteração sem o custo de consenso distribuído.", "variant": "green" },
+      { "title": "MULTI_TENANT_ISOLATION", "tagline": "Tenant, quota e orçamento escopados por principal (Saturn).", "description": "Tenants são de primeira classe: principais, papéis, planos de capacidade, quota e orçamento vivem sob um único dono, e as leituras resolvem o tenant a partir do token em vez de confiar num parâmetro de consulta.", "variant": "gold" },
+      { "title": "NO_LOCK_IN", "tagline": "Modelo e agente são plugáveis — agnóstico de harness via MCP.", "description": "A inferência passa por um único gateway, entre provedores externos e modelos locais. O contrato de governança vale de forma idêntica para Claude Code, Codex e Cursor: o ativo é o método e o grafo, não o fornecedor.", "variant": "blue" },
+      { "title": "BOUNDED_EFFORT", "tagline": "Toda tarefa declara seu custo antes de executar.", "description": "Sem processos descontrolados, sem surpresas na fatura. Toda execução possui um orçamento pré-declarado de tempo, recursos e operações. Se o orçamento for excedido, a tarefa é encerrada com segurança.", "variant": "green" }
     ]
   },
   "status": {
     "headline": "STATUS",
-    "subtitle": "Registro operacional. Marcos verificados.",
+    "subtitle": "Marcos de engenharia verificados. Cada um medido ao vivo, na data indicada.",
     "milestones": [
-      { "timestamp": "2026-06-11", "level": "ATIVO", "message": "AGNOSTICISMO_DE_HARNESS — Contrato de governança validado de forma idêntica em Claude Code, Codex e Cursor via MCP (3/3)" },
-      { "timestamp": "2026-05-07", "level": "ATIVO", "message": "AGENT_DELEGATION — Agentes podem delegar sub-tarefas autonomamente a trabalhadores especializados" },
-      { "timestamp": "2026-05-06", "level": "ATIVO", "message": "JUDGMENT_SYSTEM — Avaliação de qualidade operando em shadow; convergência estatística confirmada" },
-      { "timestamp": "2026-05-04", "level": "ATIVO", "message": "REPUTATION_ENGINE — Rastreamento de desempenho em 121 ciclos de avaliação" },
-      { "timestamp": "2026-04-25", "level": "ATIVO", "message": "FULL_LIFECYCLE — Pipeline de conformidade ponta-a-ponta de 7 etapas operacional" },
-      { "timestamp": "2026-04-23", "level": "ATIVO", "message": "SECURITY_LAYER — Autorização, gerenciamento de segredos e emissão de tokens ativos" },
-      { "timestamp": "2026-04-22", "level": "ATIVO", "message": "MEMORY_SYSTEM — Armazenamento unificado de conhecimento com desduplicação e cadeia de auditoria" },
-      { "timestamp": "2026-04-21", "level": "ATIVO", "message": "MESSAGING_LAYER — Infraestrutura de streaming de eventos com 6 canais de comunicação" },
-      { "timestamp": "2026-04-20", "level": "ATIVO", "message": "GOVERNANCE — Gerenciamento de identidade, rastreamento de orçamento e encaminhamento de conformidade ativos" },
-      { "timestamp": "2026-04-18", "level": "ATIVO", "message": "MONITORING_BRIDGE — Integração de telemetria de hardware operacional" }
+      { "timestamp": "2026-08-05", "level": "PROVADO", "message": "AUDIT_WRITE_LOCK — Trava de escrita por tenant na cadeia de hash de auditoria ligada; gate ao vivo 3/3" },
+      { "timestamp": "2026-08-01", "level": "PROVADO", "message": "JUDGMENT_CORPUS_PROVENANCE — O julgamento em shadow deixa de injetar valores fabricados; todo atributo é real, curado ou desconhecido" },
+      { "timestamp": "2026-07-24", "level": "PROVADO", "message": "SUBMISSION_PERIMETER — Um chamador que apenas se declara interno não pula mais o classificador de segurança; identidade declarada e não provada é removida" },
+      { "timestamp": "2026-07-23", "level": "PROVADO", "message": "MASTER_CREDENTIAL_REMOVED — O token admin de bypass total está morto; toda autorização admin passa por RBAC por usuário (FGA). Token antigo → 401, token de sessão → 200" },
+      { "timestamp": "2026-07-14", "level": "PROVADO", "message": "FAIL_CLOSED_CONVERSION — Seis gates de segurança convertidos de fail-open para fail-closed, cada um datado e commitado (2026-07-13 → 2026-08-01)" },
+      { "timestamp": "2026-07-13", "level": "PROVADO", "message": "SECRET_RESOLUTION_GATED — O endpoint de resolução de segredos deixa de responder sem credencial: sem bearer → 401" },
+      { "timestamp": "2026-07-13", "level": "PROVADO", "message": "SESSION_KEY_DURABILITY — A chave de assinatura de sessão passa a vir do cofre; um restart não invalida mais todas as sessões vivas" },
+      { "timestamp": "2026-07-10", "level": "PROVADO", "message": "TENANT_FROM_TOKEN — Superfícies de leitura abertas passam a exigir credencial e a resolver o tenant pelo token, não por parâmetro de consulta" },
+      { "timestamp": "2026-07-10", "level": "PROVADO", "message": "FEDERATED_LOGIN — Login humano federado via OIDC (Keycloak); a plataforma jamais armazena senha" },
+      { "timestamp": "2026-06-11", "level": "PROVADO", "message": "HARNESS_AGNOSTICISM — O contrato de governança fechou de forma idêntica sob Claude Code, Codex e Cursor pelo fio MCP real (3/3)" }
     ],
-    "system_status": "STATUS_DO_SISTEMA: 9/11 SUBSISTEMAS OPERACIONAIS | 2 PLANEJADOS PARA A PRÓXIMA FASE"
+    "evidence_note": "EVIDÊNCIA: cada marco está registrado no ledger de enforcement da plataforma, com seu flag, postura de falha e registro de decisão."
   },
-  "about": {
-    "headline": "SOBRE",
-    "positioning": "Solar Systems AI é construído sobre a convicção de que a infraestrutura inteligente deve servir a objetivos humanos — não demandar atenção humana. Construímos sistemas que desaparecem da percepção, libertando pessoas para o que mais importa.",
-    "approach": "Toda decisão arquitetural reflete nossa crença de que a automação deve ser delimitada, responsabilizável e a serviço da presença humana. Isto não é 'IA em todo lugar' — é IA precisamente onde ela deve estar.",
-    "team": "DADOS_DA_EQUIPE: CLASSIFICADO"
-  }
+  "about": { "headline": "SOBRE", "positioning": "Solar Systems AI é construído sobre a convicção de que a infraestrutura inteligente deve servir a objetivos humanos — não demandar atenção humana. Construímos sistemas que desaparecem da percepção, libertando pessoas para o que mais importa.", "approach": "Toda decisão arquitetural reflete nossa crença de que a automação deve ser delimitada, responsabilizável e a serviço da presença humana. Isto não é 'IA em todo lugar' — é IA precisamente onde ela deve estar.", "team": "DADOS_DA_EQUIPE: CLASSIFICADO" }
 }

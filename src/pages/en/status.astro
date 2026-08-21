@@ -16,7 +16,7 @@ import en from '../../i18n/en.json';
       <!-- Title bar -->
       <div class="flex items-center gap-3 px-4 py-2 bg-theme-terminal border-b border-theme-border">
         <span class="w-2.5 h-2.5 rounded-full bg-theme-success shrink-0"></span>
-        <span class="text-[10px] text-theme-muted tracking-[0.2em] font-bold font-mono">OPERATIONAL_LOG</span>
+        <span class="text-[10px] text-theme-muted tracking-[0.2em] font-bold font-mono">VERIFIED_MILESTONES</span>
       </div>
       <!-- Feed body -->
       <div class="px-4 py-3 space-y-1">
@@ -26,11 +26,11 @@ import en from '../../i18n/en.json';
       </div>
     </div>
 
-    <!-- System Status Summary -->
+    <!-- Evidence note -->
     <div class="bg-theme-surface rounded shadow-sm px-5 py-4 border border-theme-border">
-      <div class="flex items-center gap-3">
-        <span class="inline-block w-2 h-2 rounded-full bg-theme-accent"></span>
-        <span class="font-mono text-xs tracking-wider text-theme-text font-bold">{en.status.system_status}</span>
+      <div class="flex items-start gap-3">
+        <span class="inline-block w-2 h-2 rounded-full bg-theme-accent mt-1.5 shrink-0"></span>
+        <span class="font-mono text-xs tracking-wider text-theme-muted leading-relaxed">{en.status.evidence_note}</span>
       </div>
     </div>
   </section>
